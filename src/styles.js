@@ -30,11 +30,21 @@ export const RoleText = styled.p`
   margin: 0;
 `;
 
-export const TitleWrapper = styled.div`
-  margin-bottom: 10rem;
+export const ContentWrapper = styled.div`
   font-family: "Trebuchet MS", sans-serif;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+`;
+
+export const LinkLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rem;
+`;
+
+export const LinkLogo = styled.img`
+  width: 10rem;
+  padding: 20px;
 `;
