@@ -12,7 +12,6 @@ import {
   RoleText,
   LinkLogoSectionWrapper,
   LinkLogoWrapper,
-  LinkLogoLabel,
 } from "./styles";
 
 function App() {
