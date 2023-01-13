@@ -1,5 +1,7 @@
+import React from "react";
 import "animate.css";
 import HarleyProfilePhoto from "./images/harleyProfile.png";
+import LinkedinLogo from "./images/linkedin.svg";
 import {
   NameText,
   HomepageRoot,
@@ -19,9 +21,7 @@ function App() {
           <NameText>Harley Welsby</NameText>
           <RoleText>Full-Stack Software Developer</RoleText>
         </TitleWrapper>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
+        <img src={LinkedinLogo} alt="linkedin" width="150rem;" />
       </div>
     </HomepageRoot>
   );
