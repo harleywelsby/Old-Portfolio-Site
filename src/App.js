@@ -1,24 +1,17 @@
-import ProfilePhoto from "./images/HarleyProfile.png";
-import "./App.css";
+import HarleyProfilePhoto from "./images/harleyProfile.png";
+import { PageRoot, ProfilePhoto } from "./styles";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={ProfilePhoto} className="profilePhoto" alt="ProfilePhoto" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageRoot>
+      <ProfilePhoto src={HarleyProfilePhoto} alt="ProfilePhoto" />
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        Learn React
+      </a>
+    </PageRoot>
   );
 }
 
