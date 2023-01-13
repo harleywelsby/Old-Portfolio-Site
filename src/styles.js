@@ -5,7 +5,7 @@ export const HomepageRoot = styled.div`
   background-color: #282a3a;
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => props.flexDirection};
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -21,7 +21,7 @@ export const ProfilePhoto = styled.img`
 `;
 
 export const NameText = styled.h1`
-  font-size: 90px;
+  font-size: ${(props) => props.fontSize};
   display: contents;
   color: #ffaa4c;
 `;
@@ -29,6 +29,7 @@ export const NameText = styled.h1`
 export const RoleText = styled.p`
   font-size: 35px;
   margin: 0;
+  text-align: center;
 `;
 
 export const ContentWrapper = styled.div`

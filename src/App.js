@@ -15,15 +15,22 @@ import {
 } from "./styles";
 
 function App() {
+  // Check if user is on mobile
+  // https://stackoverflow.com/questions/15365352/easiest-way-to-determine-if-user-is-on-mobile-device
+  const isUserOnMobile =
+    !!navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
+
   return (
-    <HomepageRoot>
+    <HomepageRoot flexDirection={isUserOnMobile ? "column-reverse" : "row"}>
       <div class="animate__bounceIn">
         <ProfilePhoto src="/harleyProfile.png" alt="ProfilePhoto" />
       </div>
       <ContentWrapper>
         <div class="animate__bounceIn">
           <ContentWrapper>
-            <NameText>Harley Welsby</NameText>
+            <NameText fontSize={isUserOnMobile ? "50px" : "90px"}>
+              Harley Welsby
+            </NameText>
             <RoleText>Full-Stack Software Developer</RoleText>
           </ContentWrapper>
         </div>
