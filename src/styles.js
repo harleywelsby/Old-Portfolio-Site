@@ -38,13 +38,12 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const LinkLogoWrapper = styled.div`
+export const LinkLogoSectionWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 10rem;
+  margin-top: 3rem;
 `;
 
-export const LinkLogo = styled.img`
-  width: 10rem;
+export const LinkLogoWrapper = styled.div`
   padding: 20px;
 `;
