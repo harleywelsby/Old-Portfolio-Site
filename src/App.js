@@ -1,23 +1,29 @@
 import "animate.css";
 import HarleyProfilePhoto from "./images/harleyProfile.png";
-import { NameText, PageRoot, ProfilePhoto } from "./styles";
+import {
+  NameText,
+  HomepageRoot,
+  ProfilePhoto,
+  TitleWrapper,
+  RoleText,
+} from "./styles";
 
 function App() {
   return (
-    <PageRoot>
+    <HomepageRoot>
       <div class="animate__bounceIn">
         <ProfilePhoto src={HarleyProfilePhoto} alt="ProfilePhoto" />
       </div>
       <div class="animate__bounceIn">
-        <NameText>Harley Welsby</NameText>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <TitleWrapper>
+          <NameText>Harley Welsby</NameText>
+          <RoleText>Full-Stack Software Developer</RoleText>
+        </TitleWrapper>
         <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
       </div>
-    </PageRoot>
+    </HomepageRoot>
   );
 }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "animate.css";
 
-export const PageRoot = styled.div`
+export const HomepageRoot = styled.div`
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -21,8 +21,20 @@ export const ProfilePhoto = styled.img`
 `;
 
 export const NameText = styled.h1`
-  display: flex;
-  margin-bottom: 10rem;
   font-size: 90px;
+  display: contents;
+`;
+
+export const RoleText = styled.p`
+  font-size: 35px;
+  margin: 0;
+`;
+
+export const TitleWrapper = styled.div`
+  margin-bottom: 10rem;
   font-family: "Trebuchet MS", sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 `;
