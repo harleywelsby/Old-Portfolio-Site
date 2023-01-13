@@ -1,5 +1,6 @@
 import React from "react";
 import "animate.css";
+import "./index.css";
 import HarleyProfilePhoto from "./images/harleyProfile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -42,7 +43,7 @@ function App() {
 function LinkLogo(iconName) {
   return (
     <LinkLogoWrapper>
-      <FontAwesomeIcon icon={iconName} size="5x" />
+      <FontAwesomeIcon icon={iconName} size="5x" className="linkLogo" />
     </LinkLogoWrapper>
   );
 }

@@ -42,6 +42,9 @@ export const LinkLogoSectionWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
 `;
 
 export const LinkLogoWrapper = styled.div`
