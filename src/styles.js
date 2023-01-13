@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "animate.css";
 
 export const HomepageRoot = styled.div`
-  background-color: #282c34;
+  background-color: #282a3a;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -23,6 +23,7 @@ export const ProfilePhoto = styled.img`
 export const NameText = styled.h1`
   font-size: 90px;
   display: contents;
+  color: #ffaa4c;
 `;
 
 export const RoleText = styled.p`
@@ -41,7 +42,7 @@ export const ContentWrapper = styled.div`
 export const LinkLogoSectionWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 3rem;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
   min-height: 250px;

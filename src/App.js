@@ -4,7 +4,6 @@ import "./index.css";
 import HarleyProfilePhoto from "./images/harleyProfile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
 import {
   NameText,
   HomepageRoot,
@@ -30,9 +29,8 @@ function App() {
         </div>
         <div class="animate__bounceIn">
           <LinkLogoSectionWrapper>
-            {LinkLogo(faLinkedin)}
-            {LinkLogo(faGithub)}
-            {LinkLogo(faEnvelopeOpenText)}
+            {LinkLogo(faLinkedin, "https://www.linkedin.com/in/harleywelsby/")}
+            {LinkLogo(faGithub, "https://github.com/harleywelsby")}
           </LinkLogoSectionWrapper>
         </div>
       </ContentWrapper>
@@ -40,10 +38,17 @@ function App() {
   );
 }
 
-function LinkLogo(iconName) {
+function LinkLogo(iconName, link) {
   return (
     <LinkLogoWrapper>
-      <FontAwesomeIcon icon={iconName} size="5x" className="linkLogo" />
+      <a href={link} target="_blank" rel="noreferrer">
+        <FontAwesomeIcon
+          icon={iconName}
+          size="5x"
+          className="linkLogo"
+          color="white"
+        />
+      </a>
     </LinkLogoWrapper>
   );
 }

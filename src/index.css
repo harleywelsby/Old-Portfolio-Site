@@ -13,7 +13,7 @@ code {
 }
 
 .linkLogo:hover {
-  color: red;
+  color: #ffaa4c;
   font-size: 6em;
   transition: 0.3s ease-out;
 }
