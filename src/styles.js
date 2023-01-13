@@ -13,7 +13,7 @@ export const HomepageRoot = styled.div`
 `;
 
 export const ProfilePhoto = styled.img`
-  width: 30rem;
+  width: ${(props) => props.imageWidth};
   display: flex;
   padding: 10px;
   margin-right: 8rem;

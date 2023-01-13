@@ -23,7 +23,11 @@ function App() {
   return (
     <HomepageRoot flexDirection={isUserOnMobile ? "column-reverse" : "row"}>
       <div class="animate__bounceIn">
-        <ProfilePhoto src="/harleyProfile.png" alt="ProfilePhoto" />
+        <ProfilePhoto
+          src="/harleyProfile.png"
+          alt="ProfilePhoto"
+          imageWidth={isUserOnMobile ? "16rem" : "30rem"}
+        />
       </div>
       <ContentWrapper>
         <div class="animate__bounceIn">
