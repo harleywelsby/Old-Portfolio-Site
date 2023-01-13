@@ -1,7 +1,6 @@
 import React from "react";
 import "animate.css";
 import "./index.css";
-import HarleyProfilePhoto from "./images/harleyProfile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -18,7 +17,7 @@ function App() {
   return (
     <HomepageRoot>
       <div class="animate__bounceIn">
-        <ProfilePhoto src={HarleyProfilePhoto} alt="ProfilePhoto" />
+        <ProfilePhoto src="/harleyProfile.png" alt="ProfilePhoto" />
       </div>
       <ContentWrapper>
         <div class="animate__bounceIn">

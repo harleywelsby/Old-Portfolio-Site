@@ -6,6 +6,11 @@
       "src": "icon.png",
       "sizes": "50x50",
       "type": "image/png"
+    },
+    {
+      "src": "harleyProfile.png",
+      "sizes": "789x998",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
