@@ -1,6 +1,6 @@
 # HarleyWelsby.dev
 
-My portfolio website, built with React.js.
+My website, built with React.js and hosted on Vercel.
 
 ![Demo](websiteDemo.png "WebsiteDemo")
 
