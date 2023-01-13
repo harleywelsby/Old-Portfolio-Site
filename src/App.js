@@ -27,6 +27,7 @@ function App() {
           src="/harleyProfile.png"
           alt="ProfilePhoto"
           imageWidth={isUserOnMobile ? "16rem" : "30rem"}
+          marginRight={isUserOnMobile ? "0rem" : "8rem"}
         />
       </div>
       <ContentWrapper>

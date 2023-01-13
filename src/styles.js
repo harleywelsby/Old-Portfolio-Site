@@ -16,7 +16,7 @@ export const ProfilePhoto = styled.img`
   width: ${(props) => props.imageWidth};
   display: flex;
   padding: 10px;
-  margin-right: 8rem;
+  margin-right: ${(props) => props.marginRight};
   border-radius: 30px;
 `;
 
