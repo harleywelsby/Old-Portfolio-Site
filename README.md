@@ -2,6 +2,8 @@
 
 My portfolio website, built with React.js.
 
+![Demo](websiteDemo.png "WebsiteDemo")
+
 ## Notable Packages Used:
 
 - LinkedIn/GitHub Icons from <a href="https://fontawesome.com/">FontAwesome</a>
