@@ -2,7 +2,7 @@
 
 My website, built with React.js and hosted on Vercel.
 
-<!--![Demo](websiteDemo.png "WebsiteDemo")-->
+![Demo](websiteDemo.png "WebsiteDemo")
 
 ## Notable Packages Used:
 
