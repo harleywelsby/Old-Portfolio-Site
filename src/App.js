@@ -13,6 +13,7 @@ import {
   LinkLogoSectionWrapper,
   LinkLogoWrapper,
 } from "./styles";
+import { CodeUrl, GithubUrl, LinkedinUrl, Subtitle, Title } from "./const";
 
 function App() {
   // Check if user is on mobile
@@ -34,19 +35,16 @@ function App() {
         <div class="animate__bounceIn">
           <ContentWrapper>
             <NameText fontSize={isUserOnMobile ? "50px" : "90px"}>
-              Harley Welsby
+              {Title}
             </NameText>
-            <RoleText>Full-Stack Software Developer</RoleText>
+            <RoleText>{Subtitle}</RoleText>
           </ContentWrapper>
         </div>
         <div class="animate__bounceIn">
           <LinkLogoSectionWrapper>
-            {LinkLogo(faLinkedin, "https://www.linkedin.com/in/harleywelsby/")}
-            {LinkLogo(faGithub, "https://github.com/harleywelsby")}
-            {LinkLogo(
-              faCode,
-              "https://github.com/harleywelsby/harleywelsby-dev"
-            )}
+            {LinkLogo(faLinkedin, LinkedinUrl)}
+            {LinkLogo(faGithub, GithubUrl)}
+            {LinkLogo(faCode, CodeUrl)}
           </LinkLogoSectionWrapper>
         </div>
       </ContentWrapper>
