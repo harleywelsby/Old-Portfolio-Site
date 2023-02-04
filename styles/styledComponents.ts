@@ -1,27 +1,32 @@
 import styled from "styled-components";
 import "animate.css";
 
-export const HomepageRoot = styled.div`
+interface ICrossPlatformComponent {
+  isUserOnMobile: boolean;
+}
+
+export const HomepageRoot = styled.div<ICrossPlatformComponent>`
   background-color: #282a3a;
   min-height: 100vh;
   display: flex;
-  flex-direction: ${(props) => props.flexDirection};
+  flex-direction: ${(props) =>
+    props.isUserOnMobile ? "column-reverse" : "row"}
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 `;
 
-export const ProfilePhoto = styled.img`
-  width: ${(props) => props.imageWidth};
+export const ProfilePhoto = styled.img<ICrossPlatformComponent>`
+  width: ${(props) => (props.isUserOnMobile ? "16rem" : "30rem")};
   display: flex;
   padding: 10px;
-  margin-right: ${(props) => props.marginRight};
+  margin-right: ${(props) => (props.isUserOnMobile ? "0rem" : "8rem")};
   border-radius: 30px;
 `;
 
-export const NameText = styled.h1`
-  font-size: ${(props) => props.fontSize};
+export const NameText = styled.h1<ICrossPlatformComponent>`
+  font-size: ${(props) => (props.isUserOnMobile ? "50px" : "90px")};
   display: contents;
   color: #ffaa4c;
 `;
