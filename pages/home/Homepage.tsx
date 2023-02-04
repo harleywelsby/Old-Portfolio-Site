@@ -16,13 +16,17 @@ import {
   LinkLogoSectionWrapper,
   LinkLogoWrapper,
 } from "../../styles/styledComponents";
-import { CodeUrl, GithubUrl, LinkedinUrl, Subtitle, Title } from "../const";
 
-function Homepage() {
+const Homepage = () => {
   // Check if user is on mobile
   // https://stackoverflow.com/questions/15365352/easiest-way-to-determine-if-user-is-on-mobile-device
   const isUserOnMobile = false;
   // !!navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
+
+  // Links for link logos
+  const LinkedinUrl = "https://www.linkedin.com/in/harleywelsby/";
+  const GithubUrl = "https://github.com/harleywelsby";
+  const CodeUrl = "https://github.com/harleywelsby/harleywelsby-dev";
 
   return (
     // TODO: Need to update styled component vars to work with typescript
@@ -42,9 +46,9 @@ function Homepage() {
           <ContentWrapper>
             {/* @ts-ignore */}
             <NameText fontSize={isUserOnMobile ? "50px" : "90px"}>
-              {Title}
+              Harley Welsby
             </NameText>
-            <RoleText>{Subtitle}</RoleText>
+            <RoleText>Full-Stack Software Developer</RoleText>
           </ContentWrapper>
         </div>
         <div className="animate__bounceIn">
@@ -57,9 +61,9 @@ function Homepage() {
       </ContentWrapper>
     </HomepageRoot>
   );
-}
+};
 
-function LinkLogo(iconName: IconDefinition, link: string) {
+const LinkLogo = (iconName: IconDefinition, link: string) => {
   return (
     <LinkLogoWrapper>
       <a href={link} target="_blank" rel="noreferrer">
@@ -74,6 +78,6 @@ function LinkLogo(iconName: IconDefinition, link: string) {
       </a>
     </LinkLogoWrapper>
   );
-}
+};
 
 export default Homepage;
