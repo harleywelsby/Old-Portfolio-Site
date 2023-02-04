@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "animate.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faGithub,
-  IconDefinition,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import {
   NameText,
@@ -14,8 +9,8 @@ import {
   ContentWrapper,
   RoleText,
   LinkLogoSectionWrapper,
-  LinkLogoWrapper,
-} from "../../styles/styledComponents";
+} from "../styles/styledComponents";
+import LinkLogo from "@/components/LinkLogo";
 
 const Homepage: React.FC = () => {
   // Whether user is on mobile. Stored in a useState
@@ -64,34 +59,25 @@ const Homepage: React.FC = () => {
         </div>
         <div className="animate__bounceIn">
           <LinkLogoSectionWrapper>
-            {LinkLogo(faLinkedin, LinkedinUrl, isUserOnMobile)}
-            {LinkLogo(faGithub, GithubUrl, isUserOnMobile)}
-            {LinkLogo(faCode, CodeUrl, isUserOnMobile)}
+            <LinkLogo
+              iconName={faLinkedin}
+              link={LinkedinUrl}
+              isUserOnMobile={isUserOnMobile}
+            />
+            <LinkLogo
+              iconName={faGithub}
+              link={GithubUrl}
+              isUserOnMobile={isUserOnMobile}
+            />
+            <LinkLogo
+              iconName={faCode}
+              link={CodeUrl}
+              isUserOnMobile={isUserOnMobile}
+            />
           </LinkLogoSectionWrapper>
         </div>
       </ContentWrapper>
     </HomepageRoot>
-  );
-};
-
-const LinkLogo = (
-  iconName: IconDefinition,
-  link: string,
-  isUserOnMobile: boolean | RegExpMatchArray
-) => {
-  return (
-    <LinkLogoWrapper>
-      <a href={link} target="_blank" rel="noreferrer">
-        <LinkLogoWrapper>
-          <FontAwesomeIcon
-            icon={iconName}
-            size={isUserOnMobile ? "4x" : "5x"}
-            className="linkLogo"
-            color="white"
-          />
-        </LinkLogoWrapper>
-      </a>
-    </LinkLogoWrapper>
   );
 };
 
