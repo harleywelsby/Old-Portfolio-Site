@@ -20,7 +20,7 @@ import {
 const Homepage = () => {
   // Check if user is on mobile
   // https://stackoverflow.com/questions/15365352/easiest-way-to-determine-if-user-is-on-mobile-device
-  const isUserOnMobile = true;
+  const isUserOnMobile = false;
   // !!navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
 
   // Links for link logos
