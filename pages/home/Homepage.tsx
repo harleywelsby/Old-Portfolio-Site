@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,21 +16,36 @@ import {
   LinkLogoSectionWrapper,
   LinkLogoWrapper,
 } from "../../styles/styledComponents";
-import { isMobile } from "react-device-detect";
 
 const Homepage: React.FC = () => {
+  // Whether user is on mobile. Stored in a useState
+  // as the window isn't rendered immediately.
+  // https://stackoverflow.com/questions/63536562/reference-errornavigator-not-defined-with-nextjs
+  const [isUserOnMobile, setIsUserOnMobile] = useState<
+    RegExpMatchArray | boolean
+  >(false);
+
+  // Get whether a user is on mobile, once window is defined
+  useEffect(() => {
+    setIsUserOnMobile(
+      window.navigator.userAgent.match(/iphone|android|blackberry/gi) || false
+    );
+  }, []);
+
   // Links for link logos
   const LinkedinUrl = "https://www.linkedin.com/in/harleywelsby/";
   const GithubUrl = "https://github.com/harleywelsby";
   const CodeUrl = "https://github.com/harleywelsby/harleywelsby-dev";
 
   return (
-    <HomepageRoot className={isMobile ? "mobileHomepageRoot" : ""}>
+    <HomepageRoot className={isUserOnMobile ? "mobileHomepageRoot" : ""}>
       <ContentWrapper>
         <div className="animate__bounceIn">
           {/* TODO: Should be converted to a Next.js Image */}
           <ProfilePhoto
-            className={isMobile ? "mobileProfilePicture" : "webProfilePicture"}
+            className={
+              isUserOnMobile ? "mobileProfilePicture" : "webProfilePicture"
+            }
             src="/harleyProfile.png"
             alt="ProfilePhoto"
           />
@@ -39,7 +54,9 @@ const Homepage: React.FC = () => {
       <ContentWrapper>
         <div className="animate__bounceIn">
           <ContentWrapper>
-            <NameText className={isMobile ? "mobileNameText" : "webNameText"}>
+            <NameText
+              className={isUserOnMobile ? "mobileNameText" : "webNameText"}
+            >
               Harley Welsby
             </NameText>
             <RoleText>Full-Stack Software Developer</RoleText>
@@ -47,9 +64,9 @@ const Homepage: React.FC = () => {
         </div>
         <div className="animate__bounceIn">
           <LinkLogoSectionWrapper>
-            {LinkLogo(faLinkedin, LinkedinUrl, isMobile)}
-            {LinkLogo(faGithub, GithubUrl, isMobile)}
-            {LinkLogo(faCode, CodeUrl, isMobile)}
+            {LinkLogo(faLinkedin, LinkedinUrl, isUserOnMobile)}
+            {LinkLogo(faGithub, GithubUrl, isUserOnMobile)}
+            {LinkLogo(faCode, CodeUrl, isUserOnMobile)}
           </LinkLogoSectionWrapper>
         </div>
       </ContentWrapper>
@@ -60,7 +77,7 @@ const Homepage: React.FC = () => {
 const LinkLogo = (
   iconName: IconDefinition,
   link: string,
-  isUserOnMobile: boolean
+  isUserOnMobile: boolean | RegExpMatchArray
 ) => {
   return (
     <LinkLogoWrapper>
