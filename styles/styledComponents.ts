@@ -7,7 +7,7 @@ interface ICrossPlatformComponent {
 
 export const HomepageRoot = styled.div<ICrossPlatformComponent>`
   background-color: #282a3a;
-  min-height: 90vh;
+  min-height: 98vh;
   display: flex;
   align-items: center;
   justify-content: center;

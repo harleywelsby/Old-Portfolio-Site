@@ -16,27 +16,21 @@ import {
   LinkLogoSectionWrapper,
   LinkLogoWrapper,
 } from "../../styles/styledComponents";
+import { isMobile } from "react-device-detect";
 
-const Homepage = () => {
-  // Check if user is on mobile
-  // https://stackoverflow.com/questions/15365352/easiest-way-to-determine-if-user-is-on-mobile-device
-  const isUserOnMobile = false;
-  // !!navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
-
+const Homepage: React.FC = () => {
   // Links for link logos
   const LinkedinUrl = "https://www.linkedin.com/in/harleywelsby/";
   const GithubUrl = "https://github.com/harleywelsby";
   const CodeUrl = "https://github.com/harleywelsby/harleywelsby-dev";
 
   return (
-    <HomepageRoot className={isUserOnMobile ? "mobileHomepageRoot" : ""}>
+    <HomepageRoot className={isMobile ? "mobileHomepageRoot" : ""}>
       <ContentWrapper>
         <div className="animate__bounceIn">
           {/* TODO: Should be converted to a Next.js Image */}
           <ProfilePhoto
-            className={
-              isUserOnMobile ? "mobileProfilePicture" : "webProfilePicture"
-            }
+            className={isMobile ? "mobileProfilePicture" : "webProfilePicture"}
             src="/harleyProfile.png"
             alt="ProfilePhoto"
           />
@@ -45,9 +39,7 @@ const Homepage = () => {
       <ContentWrapper>
         <div className="animate__bounceIn">
           <ContentWrapper>
-            <NameText
-              className={isUserOnMobile ? "mobileNameText" : "webNameText"}
-            >
+            <NameText className={isMobile ? "mobileNameText" : "webNameText"}>
               Harley Welsby
             </NameText>
             <RoleText>Full-Stack Software Developer</RoleText>
@@ -55,9 +47,9 @@ const Homepage = () => {
         </div>
         <div className="animate__bounceIn">
           <LinkLogoSectionWrapper>
-            {LinkLogo(faLinkedin, LinkedinUrl, isUserOnMobile)}
-            {LinkLogo(faGithub, GithubUrl, isUserOnMobile)}
-            {LinkLogo(faCode, CodeUrl, isUserOnMobile)}
+            {LinkLogo(faLinkedin, LinkedinUrl, isMobile)}
+            {LinkLogo(faGithub, GithubUrl, isMobile)}
+            {LinkLogo(faCode, CodeUrl, isMobile)}
           </LinkLogoSectionWrapper>
         </div>
       </ContentWrapper>
