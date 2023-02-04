@@ -1,6 +1,6 @@
 # https://www.harleywelsby.dev/
 
-My website, built with React.js and hosted serverlessly on Vercel.
+My website, built with the Next.js framework for React and hosted serverlessly on Vercel.
 
 ![Demo](websiteDemo.png "WebsiteDemo")
 

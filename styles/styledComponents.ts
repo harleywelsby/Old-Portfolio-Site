@@ -1,27 +1,27 @@
 import styled from "styled-components";
 import "animate.css";
 
-export const HomepageRoot = styled.div`
+interface ICrossPlatformComponent {
+  className: string;
+}
+
+export const HomepageRoot = styled.div<ICrossPlatformComponent>`
   background-color: #282a3a;
-  min-height: 100vh;
+  min-height: 98vh;
   display: flex;
-  flex-direction: ${(props) => props.flexDirection};
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 `;
 
-export const ProfilePhoto = styled.img`
-  width: ${(props) => props.imageWidth};
+export const ProfilePhoto = styled.img<ICrossPlatformComponent>`
   display: flex;
   padding: 10px;
-  margin-right: ${(props) => props.marginRight};
   border-radius: 30px;
 `;
 
-export const NameText = styled.h1`
-  font-size: ${(props) => props.fontSize};
+export const NameText = styled.h1<ICrossPlatformComponent>`
   display: contents;
   color: #ffaa4c;
 `;
@@ -44,9 +44,10 @@ export const LinkLogoSectionWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
+  min-height: 150px;
 `;
 
 export const LinkLogoWrapper = styled.div`
