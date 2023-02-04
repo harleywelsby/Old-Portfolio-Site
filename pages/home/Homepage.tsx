@@ -20,7 +20,7 @@ import {
 const Homepage = () => {
   // Check if user is on mobile
   // https://stackoverflow.com/questions/15365352/easiest-way-to-determine-if-user-is-on-mobile-device
-  const isUserOnMobile = false;
+  const isUserOnMobile = true;
   // !!navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
 
   // Links for link logos
@@ -29,26 +29,35 @@ const Homepage = () => {
   const CodeUrl = "https://github.com/harleywelsby/harleywelsby-dev";
 
   return (
-    <HomepageRoot isUserOnMobile={isUserOnMobile}>
-      <div className="animate__bounceIn">
-        <ProfilePhoto
-          src="/harleyProfile.png"
-          alt="ProfilePhoto"
-          isUserOnMobile={isUserOnMobile}
-        />
-      </div>
+    <HomepageRoot className={isUserOnMobile ? "mobileHomepageRoot" : ""}>
+      <ContentWrapper>
+        <div className="animate__bounceIn">
+          {/* TODO: Should be converted to a Next.js Image */}
+          <ProfilePhoto
+            className={
+              isUserOnMobile ? "mobileProfilePicture" : "webProfilePicture"
+            }
+            src="/harleyProfile.png"
+            alt="ProfilePhoto"
+          />
+        </div>
+      </ContentWrapper>
       <ContentWrapper>
         <div className="animate__bounceIn">
           <ContentWrapper>
-            <NameText isUserOnMobile={isUserOnMobile}>Harley Welsby</NameText>
+            <NameText
+              className={isUserOnMobile ? "mobileNameText" : "webNameText"}
+            >
+              Harley Welsby
+            </NameText>
             <RoleText>Full-Stack Software Developer</RoleText>
           </ContentWrapper>
         </div>
         <div className="animate__bounceIn">
           <LinkLogoSectionWrapper>
-            {LinkLogo(faLinkedin, LinkedinUrl)}
-            {LinkLogo(faGithub, GithubUrl)}
-            {LinkLogo(faCode, CodeUrl)}
+            {LinkLogo(faLinkedin, LinkedinUrl, isUserOnMobile)}
+            {LinkLogo(faGithub, GithubUrl, isUserOnMobile)}
+            {LinkLogo(faCode, CodeUrl, isUserOnMobile)}
           </LinkLogoSectionWrapper>
         </div>
       </ContentWrapper>
@@ -56,14 +65,18 @@ const Homepage = () => {
   );
 };
 
-const LinkLogo = (iconName: IconDefinition, link: string) => {
+const LinkLogo = (
+  iconName: IconDefinition,
+  link: string,
+  isUserOnMobile: boolean
+) => {
   return (
     <LinkLogoWrapper>
       <a href={link} target="_blank" rel="noreferrer">
         <LinkLogoWrapper>
           <FontAwesomeIcon
             icon={iconName}
-            size="5x"
+            size={isUserOnMobile ? "4x" : "5x"}
             className="linkLogo"
             color="white"
           />

@@ -1,3 +1,5 @@
+/* Global Styles */
+
 html {
   background-color: #282a3a;
   margin: 0;
@@ -10,4 +12,28 @@ html {
 
 .linkLogo:hover {
   color: #ffaa4c;
+}
+
+/* Mobile and Web Specific Styles */
+
+.mobileHomepageRoot {
+  flex-direction: column-reverse;
+}
+
+.mobileProfilePicture {
+  width: 16rem;
+  margin-right: 0rem;
+}
+
+.webProfilePicture {
+  width: 30rem;
+  margin-right: 8rem;
+}
+
+.mobileNameText {
+  font-size: 50px;
+}
+
+.webNameText {
+  font-size: 90px;
 }
