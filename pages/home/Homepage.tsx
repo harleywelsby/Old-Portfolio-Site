@@ -25,11 +25,14 @@ function Homepage() {
   // !!navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
 
   return (
+    // TODO: Need to update styled component vars to work with typescript
+    // @ts-ignore
     <HomepageRoot flexDirection={isUserOnMobile ? "column-reverse" : "row"}>
       <div className="animate__bounceIn">
         <ProfilePhoto
           src="/harleyProfile.png"
           alt="ProfilePhoto"
+          // @ts-ignore
           imageWidth={isUserOnMobile ? "16rem" : "30rem"}
           marginRight={isUserOnMobile ? "0rem" : "8rem"}
         />
@@ -37,6 +40,7 @@ function Homepage() {
       <ContentWrapper>
         <div className="animate__bounceIn">
           <ContentWrapper>
+            {/* @ts-ignore */}
             <NameText fontSize={isUserOnMobile ? "50px" : "90px"}>
               {Title}
             </NameText>
