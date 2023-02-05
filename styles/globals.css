@@ -20,12 +20,13 @@ html {
   flex-direction: column-reverse;
 }
 
-.mobileProfilePicture {
+.mobileProfilePhoto {
   width: 16rem;
+  height: 20rem;
   margin-right: 0rem;
 }
 
-.webProfilePicture {
+.webProfilePhoto {
   width: 30rem;
   margin-right: 8rem;
 }
@@ -36,4 +37,10 @@ html {
 
 .webNameText {
   font-size: 90px;
+}
+
+.profilePhoto {
+  display: flex;
+  padding: 10px;
+  border-radius: 30px;
 }

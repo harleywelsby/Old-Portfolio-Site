@@ -15,12 +15,6 @@ export const HomepageRoot = styled.div<ICrossPlatformComponent>`
   color: white;
 `;
 
-export const ProfilePhoto = styled.img<ICrossPlatformComponent>`
-  display: flex;
-  padding: 10px;
-  border-radius: 30px;
-`;
-
 export const NameText = styled.h1<ICrossPlatformComponent>`
   display: contents;
   color: #ffaa4c;

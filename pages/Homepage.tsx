@@ -5,12 +5,12 @@ import { faCode } from "@fortawesome/free-solid-svg-icons";
 import {
   NameText,
   HomepageRoot,
-  ProfilePhoto,
   ContentWrapper,
   RoleText,
   LinkLogoSectionWrapper,
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
+import Image from "next/image";
 
 const Homepage: React.FC = () => {
   // Whether user is on mobile. Stored in a useState
@@ -36,13 +36,14 @@ const Homepage: React.FC = () => {
     <HomepageRoot className={isUserOnMobile ? "mobileHomepageRoot" : ""}>
       <ContentWrapper>
         <div className="animate__bounceIn">
-          {/* TODO: Should be converted to a Next.js Image */}
-          <ProfilePhoto
-            className={
-              isUserOnMobile ? "mobileProfilePicture" : "webProfilePicture"
-            }
+          <Image
+            className={`profilePhoto ${
+              isUserOnMobile ? "mobileProfilePhoto" : "webProfilePhoto"
+            }`}
             src="/harleyProfile.png"
             alt="ProfilePhoto"
+            width={480}
+            height={630}
           />
         </div>
       </ContentWrapper>
