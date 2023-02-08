@@ -41,7 +41,7 @@ function Homepage() {
             className={`profilePhoto ${
               isUserOnMobile ? "mobileProfilePhoto" : "webProfilePhoto"
             }`}
-            src="/harleyProfile.png"
+            src="/harleyProfile.jpg"
             alt="ProfilePhoto"
             width={480}
             height={630}
