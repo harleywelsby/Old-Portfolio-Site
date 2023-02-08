@@ -2,7 +2,7 @@
 
 My website, built with the Next.js framework for React and hosted serverlessly on Vercel.
 
-![Demo](websiteDemo.png "WebsiteDemo")
+![Demo](public/websiteDemo.png "WebsiteDemo")
 
 ## Notable Packages Used:
 
