@@ -10,11 +10,7 @@ interface LinkLogoProps {
   isUserOnMobile: boolean | RegExpMatchArray;
 }
 
-const LinkLogo: React.FC<LinkLogoProps> = ({
-  iconName,
-  link,
-  isUserOnMobile,
-}) => {
+function LinkLogo({ iconName, link, isUserOnMobile }: LinkLogoProps) {
   return (
     <LinkLogoWrapper>
       <a href={link} target="_blank" rel="noreferrer">
@@ -29,6 +25,6 @@ const LinkLogo: React.FC<LinkLogoProps> = ({
       </a>
     </LinkLogoWrapper>
   );
-};
+}
 
 export default LinkLogo;

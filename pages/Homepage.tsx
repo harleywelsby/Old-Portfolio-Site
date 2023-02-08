@@ -12,7 +12,7 @@ import {
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
 
-const Homepage: React.FC = () => {
+function Homepage() {
   // Whether user is on mobile. Stored in a useState
   // as the window isn't rendered immediately.
   // https://stackoverflow.com/questions/63536562/reference-errornavigator-not-defined-with-nextjs
@@ -35,6 +35,7 @@ const Homepage: React.FC = () => {
   return (
     <HomepageRoot className={isUserOnMobile ? "mobileHomepageRoot" : ""}>
       <ContentWrapper>
+        {/* Photo */}
         <div className="animate__bounceIn">
           <Image
             className={`profilePhoto ${
@@ -48,6 +49,7 @@ const Homepage: React.FC = () => {
         </div>
       </ContentWrapper>
       <ContentWrapper>
+        {/* Name and Title */}
         <div className="animate__bounceIn">
           <ContentWrapper>
             <NameText
@@ -58,6 +60,7 @@ const Homepage: React.FC = () => {
             <RoleText>Full-Stack Software Developer</RoleText>
           </ContentWrapper>
         </div>
+        {/* Link logos */}
         <div className="animate__bounceIn">
           <LinkLogoSectionWrapper>
             <LinkLogo
@@ -80,6 +83,6 @@ const Homepage: React.FC = () => {
       </ContentWrapper>
     </HomepageRoot>
   );
-};
+}
 
 export default Homepage;
