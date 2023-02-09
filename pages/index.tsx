@@ -1,12 +1,16 @@
 import HtmlHead from "@/components/HtmlHead";
-import React from "react";
+import React, { useState } from "react";
 import Homepage from "./Homepage";
+import Captcha from "./Captcha";
 
 function Home() {
+  const [isUserHuman, setIsUserHuman] = useState<boolean>(false);
+
   return (
     <>
       <HtmlHead />
-      <Homepage />
+      {!isUserHuman && <Captcha setIsUserHuman={setIsUserHuman} />}
+      {isUserHuman && <Homepage />}
     </>
   );
 }
