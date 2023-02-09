@@ -4,6 +4,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  env: {
+    SITE_KEY: process.env.SITE_KEY,
+  },
 };
 
 module.exports = nextConfig;
