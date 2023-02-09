@@ -51,3 +51,17 @@ export const LinkLogoWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const CaptchaContainer = styled.div`
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+`;
+
+export const CaptchaText = styled.h1`
+  color: #ffffff;
+  width: 25%;
+  text-align: center;
+`;
