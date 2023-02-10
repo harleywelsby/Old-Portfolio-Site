@@ -18,17 +18,28 @@ function Captcha() {
 
     // Don't do anything if the captcha hasn't been filled
     if (!token) {
-      console.log("bruh");
       return;
     }
 
-    await axios
-      .post(`https://www.google.com/recaptcha/api/siteverify`, {
-        secret: process.env.SECRET_KEY,
-        token,
-      })
-      .then((result) => console.log(result))
-      .catch((error) => console.error(error));
+    try {
+      const result = await fetch(
+        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${token}`,
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+          },
+          method: "POST",
+        }
+      );
+
+      const validation = await result.json();
+
+      if (validation.success) {
+        console.log("worked");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
