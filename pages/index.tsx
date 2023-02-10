@@ -9,8 +9,10 @@ function Home() {
   return (
     <>
       <HtmlHead />
-      {!isUserHuman && <Captcha setIsUserHuman={setIsUserHuman} />}
-      {isUserHuman && <Homepage />}
+      <Homepage />
+      {/* TODO: This can be enabled when the API calls are set up for reCAPTCHA */}
+      {/*!isUserHuman && <Captcha setIsUserHuman={setIsUserHuman} />*/}
+      {/*isUserHuman && <Homepage />*/}
     </>
   );
 }
