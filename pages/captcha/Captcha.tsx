@@ -31,7 +31,7 @@ function Captcha() {
 
       // Go to the homepage
       setIsUserHuman(true);
-      Router.push(
+      Router.replace(
         {
           pathname: "/home",
         },
