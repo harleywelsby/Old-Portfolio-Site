@@ -60,8 +60,7 @@ export const CaptchaContainer = styled.div`
   height: 80vh;
 `;
 
-export const CaptchaText = styled.h1`
+export const CaptchaText = styled.h1<ICrossPlatformComponent>`
   color: #ffffff;
-  width: 25%;
   text-align: center;
 `;
