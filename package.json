@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "@types/react-google-recaptcha": "^2.1.5"
   }
 }

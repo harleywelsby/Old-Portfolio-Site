@@ -2,6 +2,7 @@ import { CaptchaContext } from "@/components/CaptchaContext";
 import HtmlHead from "@/components/HtmlHead";
 import Router from "next/router";
 import React, { useContext, useEffect } from "react";
+import Homepage from "./Homepage";
 
 function Home() {
   const { isUserHuman } = useContext(CaptchaContext);
@@ -16,18 +17,15 @@ function Home() {
         undefined,
         { shallow: true }
       );
-    } else {
-      Router.replace(
-        {
-          pathname: "/home",
-        },
-        undefined,
-        { shallow: true }
-      );
     }
   }, [isUserHuman]);
 
-  return <HtmlHead />;
+  return (
+    <>
+      <HtmlHead />
+      <Homepage />
+    </>
+  );
 }
 
 export default Home;
