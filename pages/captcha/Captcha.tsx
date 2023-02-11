@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import "animate.css";
 import { CaptchaContainer, CaptchaText } from "@/styles/styledComponents";
+import Router from "next/router";
 
 function Captcha() {
   const captchaRef = useRef<any>(null);
@@ -25,6 +26,14 @@ function Captcha() {
         const error = await response.json();
         throw new Error(await error.message);
       }
+
+      Router.push(
+        {
+          pathname: "/home",
+        },
+        undefined,
+        { shallow: true }
+      );
     } catch (error) {
       /* TODO: Proper error handling */
     }
