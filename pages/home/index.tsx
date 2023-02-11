@@ -1,12 +1,12 @@
 import HtmlHead from "@/components/HtmlHead";
 import React from "react";
-import Captcha from "./captcha/Captcha";
+import Homepage from "./Homepage";
 
 function Home() {
   return (
     <>
       <HtmlHead />
-      <Captcha />
+      <Homepage />
     </>
   );
 }

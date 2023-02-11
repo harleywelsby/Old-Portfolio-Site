@@ -1,6 +1,6 @@
 import HtmlHead from "@/components/HtmlHead";
 import React from "react";
-import Captcha from "./captcha/Captcha";
+import Captcha from "./Captcha";
 
 function Home() {
   return (

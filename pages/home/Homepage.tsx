@@ -8,7 +8,7 @@ import {
   ContentWrapper,
   RoleText,
   LinkLogoSectionWrapper,
-} from "../styles/styledComponents";
+} from "../../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
 
