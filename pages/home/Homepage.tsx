@@ -45,6 +45,7 @@ function Homepage() {
             alt="ProfilePhoto"
             width={480}
             height={630}
+            priority={true}
           />
         </div>
       </ContentWrapper>

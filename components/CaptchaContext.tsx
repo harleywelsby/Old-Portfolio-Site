@@ -1,11 +1,18 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-interface CaptchaContextProps {
-  isUserHuman: boolean;
-  setIsUserHuman: React.Dispatch<React.SetStateAction<boolean>>;
-}
+const CaptchaContextDefaultValue = {
+  isUserHuman: false,
+  setIsUserHuman: (state: boolean) => {},
+};
 
 // Handles sharing of the isUserHuman state between pages, to verify captcha
-const CaptchaContext = createContext<CaptchaContextProps | null>(null);
+export const CaptchaContext = createContext(CaptchaContextDefaultValue);
+export const CaptchaContextProvider = ({ children }: any) => {
+  const [isUserHuman, setIsUserHuman] = useState(false);
 
-export default CaptchaContext;
+  return (
+    <CaptchaContext.Provider value={{ isUserHuman, setIsUserHuman }}>
+      {children}
+    </CaptchaContext.Provider>
+  );
+};

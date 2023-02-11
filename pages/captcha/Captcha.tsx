@@ -1,11 +1,13 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import "animate.css";
 import { CaptchaContainer, CaptchaText } from "@/styles/styledComponents";
 import Router from "next/router";
+import { CaptchaContext } from "@/components/CaptchaContext";
 
 function Captcha() {
   const captchaRef = useRef<any>(null);
+  const { setIsUserHuman } = useContext(CaptchaContext);
 
   const onChange = async (captchaResult: any) => {
     if (!captchaResult) {
@@ -27,6 +29,8 @@ function Captcha() {
         throw new Error(await error.message);
       }
 
+      // Go to the homepage
+      setIsUserHuman(true);
       Router.push(
         {
           pathname: "/home",
@@ -35,7 +39,7 @@ function Captcha() {
         { shallow: true }
       );
     } catch (error) {
-      /* TODO: Proper error handling */
+      setIsUserHuman(false);
     }
   };
 
