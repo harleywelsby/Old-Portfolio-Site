@@ -2,43 +2,31 @@ import React, { useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import "animate.css";
 import { CaptchaContainer, CaptchaText } from "@/styles/styledComponents";
-import axios from "axios";
-import cors from "cors";
 
 function Captcha() {
   const captchaRef = useRef<any>(null);
 
-  const corsOptions = {
-    origin: "https://harleywelsby.dev",
-    optionsSuccessStatus: 200,
-  };
-
-  const onChange = async (value: any) => {
-    const token = value;
-
-    // Don't do anything if the captcha hasn't been filled
-    if (!token) {
+  const onChange = async (captchaResult: any) => {
+    if (!captchaResult) {
       return;
     }
 
     try {
-      const result = await fetch(
-        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${token}`,
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
-          },
-          method: "POST",
-        }
-      );
+      // Connect to the verifyCaptcha API
+      const response = await fetch("/api/verifyCaptcha", {
+        method: "POST",
+        body: JSON.stringify({ captcha: captchaResult }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-      const validation = await result.json();
-
-      if (validation.success) {
-        console.log("worked");
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(await error.message);
       }
     } catch (error) {
-      console.log(error);
+      /* TODO: Proper error handling */
     }
   };
 
