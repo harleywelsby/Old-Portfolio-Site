@@ -66,7 +66,7 @@ export const CaptchaText = styled.h1<ICrossPlatformComponent>`
 `;
 
 export const InfoBoxText = styled.p`
-  width: 50%;
+  width: 80%;
   text-align: center;
   padding: 20px;
   border: solid;
