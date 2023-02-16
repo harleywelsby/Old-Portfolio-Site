@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "animate.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import {
   PageWrapper,
   ContentWrapper,
@@ -19,6 +19,7 @@ function Homepage() {
   // Links for link logos
   const LinkedinUrl = "https://www.linkedin.com/in/harleywelsby/";
   const GithubUrl = "https://github.com/harleywelsby";
+  const CodeUrl = "https://github.com/harleywelsby/harleywelsby-dev";
   const AboutUrl = "/about";
 
   return (
@@ -63,9 +64,10 @@ function Homepage() {
                 isUserOnMobile={isUserOnMobile}
               />
               <LinkLogo
-                iconName={faBook}
-                link={AboutUrl}
-                label="About Me"
+                iconName={faLaptopCode}
+                link={CodeUrl}
+                label="Site Code"
+                newTab
                 isUserOnMobile={isUserOnMobile}
               />
             </LinkLogoSectionWrapper>
