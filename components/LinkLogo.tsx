@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
-import { LinkLogoWrapper } from "../styles/styledComponents";
+import { LinkLogoLabel, LinkLogoWrapper } from "../styles/styledComponents";
 
 interface LinkLogoProps {
   iconName: IconDefinition;
@@ -11,19 +11,25 @@ interface LinkLogoProps {
 }
 
 function LinkLogo({ iconName, link, isUserOnMobile }: LinkLogoProps) {
+  const [isHover, setIsHover] = useState<boolean>(false);
+
   return (
-    <LinkLogoWrapper>
-      <a href={link} target="_blank" rel="noreferrer">
-        <LinkLogoWrapper>
-          <FontAwesomeIcon
-            icon={iconName}
-            size={isUserOnMobile ? "4x" : "5x"}
-            className="linkLogo"
-            color="white"
-          />
-        </LinkLogoWrapper>
-      </a>
-    </LinkLogoWrapper>
+    <a href={link} target="_blank" rel="noreferrer">
+      <LinkLogoWrapper
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
+        <FontAwesomeIcon
+          icon={iconName}
+          size={isUserOnMobile ? "4x" : "5x"}
+          className={isHover ? "linkLogo" : ""}
+          color="white"
+        />
+        <LinkLogoLabel className={isHover ? "linkLogo" : ""}>
+          GitHub
+        </LinkLogoLabel>
+      </LinkLogoWrapper>
+    </a>
   );
 }
 

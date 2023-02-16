@@ -45,11 +45,16 @@ export const LinkLogoSectionWrapper = styled.div`
 `;
 
 export const LinkLogoWrapper = styled.div`
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const LinkLogoLabel = styled.p`
+  margin-top: 1rem;
+  color: #fff;
 `;
 
 export const CaptchaContainer = styled.div`

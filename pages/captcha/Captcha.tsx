@@ -5,6 +5,7 @@ import { CaptchaContainer, CaptchaText } from "@/styles/styledComponents";
 import Router from "next/router";
 import { CaptchaContext } from "@/components/CaptchaContext";
 
+// TODO: Currently unused but good to keep around for future changes/testing
 function Captcha() {
   const captchaRef = useRef<any>(null);
   const { setIsUserHuman } = useContext(CaptchaContext);
