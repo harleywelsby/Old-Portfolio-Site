@@ -28,8 +28,7 @@ a {
 
 .profilePhoto {
   display: flex;
-  padding: 10px;
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 /* Mobile and Web Specific Styles */
@@ -46,7 +45,7 @@ a {
 
 .webProfilePhoto {
   width: 30rem;
-  margin-right: 8rem;
+  margin-right: 6rem;
 }
 
 .mobileNameText {

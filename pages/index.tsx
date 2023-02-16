@@ -30,7 +30,7 @@ function Homepage() {
   // Links for link logos
   const LinkedinUrl = "https://www.linkedin.com/in/harleywelsby/";
   const GithubUrl = "https://github.com/harleywelsby";
-  const CodeUrl = "https://github.com/harleywelsby/harleywelsby-dev";
+  const AboutUrl = "/about";
 
   return (
     <HomepageRoot className={isUserOnMobile ? "mobileHomepageRoot" : ""}>
@@ -68,18 +68,20 @@ function Homepage() {
               iconName={faLinkedin}
               link={LinkedinUrl}
               label="LinkedIn"
+              newTab
               isUserOnMobile={isUserOnMobile}
             />
             <LinkLogo
               iconName={faGithub}
               link={GithubUrl}
               label="GitHub"
+              newTab
               isUserOnMobile={isUserOnMobile}
             />
             <LinkLogo
               iconName={faBook}
-              link={CodeUrl}
-              label="Site Code"
+              link={AboutUrl}
+              label="About Me"
               isUserOnMobile={isUserOnMobile}
             />
           </LinkLogoSectionWrapper>
