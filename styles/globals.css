@@ -31,6 +31,10 @@ a {
   border-radius: 50px;
 }
 
+.aboutPageWrapper {
+  flex-direction: column;
+}
+
 /* Mobile and Web Specific Styles */
 
 .mobilePageWrapper {

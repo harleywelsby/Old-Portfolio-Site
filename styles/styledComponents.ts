@@ -64,3 +64,11 @@ export const CaptchaText = styled.h1<ICrossPlatformComponent>`
   color: #ffffff;
   text-align: center;
 `;
+
+export const InfoBoxText = styled.p`
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  border: solid;
+  border-radius: 25px;
+`;
