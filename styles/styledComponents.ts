@@ -45,7 +45,7 @@ export const LinkLogoSectionWrapper = styled.div`
 `;
 
 export const LinkLogoWrapper = styled.div`
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
@@ -7,23 +7,34 @@ import { LinkLogoWrapper } from "../styles/styledComponents";
 interface LinkLogoProps {
   iconName: IconDefinition;
   link: string;
+  label?: string;
   isUserOnMobile: boolean | RegExpMatchArray;
 }
 
-function LinkLogo({ iconName, link, isUserOnMobile }: LinkLogoProps) {
+function LinkLogo({ iconName, link, label, isUserOnMobile }: LinkLogoProps) {
+  const [isHover, setIsHover] = useState<boolean>(false);
+
   return (
-    <LinkLogoWrapper>
-      <a href={link} target="_blank" rel="noreferrer">
-        <LinkLogoWrapper>
-          <FontAwesomeIcon
-            icon={iconName}
-            size={isUserOnMobile ? "4x" : "5x"}
-            className="linkLogo"
-            color="white"
-          />
-        </LinkLogoWrapper>
-      </a>
-    </LinkLogoWrapper>
+    <a href={link} target="_blank" rel="noreferrer">
+      <LinkLogoWrapper
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
+        <FontAwesomeIcon
+          icon={iconName}
+          size={isUserOnMobile ? "4x" : "5x"}
+          className={isHover ? "linkLogoHover" : ""}
+          color="white"
+        />
+        <p
+          className={
+            isHover ? "linkLogoHover labelMargin" : "linkLogoText labelMargin"
+          }
+        >
+          {label || null}
+        </p>
+      </LinkLogoWrapper>
+    </a>
   );
 }
 

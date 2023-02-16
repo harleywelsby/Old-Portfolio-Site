@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
+// TODO: Currently unused but good to keep around for future changes/testing
+
 // Handles verifying the reCAPTCHA with Google
 export default async function handler(
   req: NextApiRequest,

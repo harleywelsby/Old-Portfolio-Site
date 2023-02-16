@@ -10,8 +10,26 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.linkLogo:hover {
+.linkLogoHover {
   color: #ffaa4c;
+}
+
+.linkLogoText {
+  color: #fff;
+}
+
+.labelMargin {
+  margin-top: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.profilePhoto {
+  display: flex;
+  padding: 10px;
+  border-radius: 30px;
 }
 
 /* Mobile and Web Specific Styles */
@@ -46,10 +64,4 @@ html {
 
 .webCaptchaText {
   width: 25%;
-}
-
-.profilePhoto {
-  display: flex;
-  padding: 10px;
-  border-radius: 30px;
 }
