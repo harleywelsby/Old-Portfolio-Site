@@ -5,7 +5,7 @@ interface ICrossPlatformComponent {
   className: string;
 }
 
-export const HomepageRoot = styled.div<ICrossPlatformComponent>`
+export const PageWrapper = styled.div<ICrossPlatformComponent>`
   background-color: #282a3a;
   min-height: 98vh;
   display: flex;

@@ -33,7 +33,7 @@ a {
 
 /* Mobile and Web Specific Styles */
 
-.mobileHomepageRoot {
+.mobilePageWrapper {
   flex-direction: column-reverse;
 }
 
