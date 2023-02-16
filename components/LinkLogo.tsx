@@ -8,14 +8,21 @@ interface LinkLogoProps {
   iconName: IconDefinition;
   link: string;
   label?: string;
+  newTab?: boolean;
   isUserOnMobile: boolean | RegExpMatchArray;
 }
 
-function LinkLogo({ iconName, link, label, isUserOnMobile }: LinkLogoProps) {
+function LinkLogo({
+  iconName,
+  link,
+  label,
+  newTab,
+  isUserOnMobile,
+}: LinkLogoProps) {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <a href={link} target="_blank" rel="noreferrer">
+    <a href={link} target={newTab ? "_blank" : ""} rel="noreferrer">
       <LinkLogoWrapper
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}

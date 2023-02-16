@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+// TODO: Currently unused but good to keep around for future changes/testing
+
 const CaptchaContextDefaultValue = {
   isUserHuman: false,
   setIsUserHuman: (state: boolean) => {},

@@ -5,7 +5,7 @@ interface ICrossPlatformComponent {
   className: string;
 }
 
-export const HomepageRoot = styled.div<ICrossPlatformComponent>`
+export const PageWrapper = styled.div<ICrossPlatformComponent>`
   background-color: #282a3a;
   min-height: 98vh;
   display: flex;
@@ -63,4 +63,12 @@ export const CaptchaContainer = styled.div`
 export const CaptchaText = styled.h1<ICrossPlatformComponent>`
   color: #ffffff;
   text-align: center;
+`;
+
+export const InfoBoxText = styled.p`
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  border: solid;
+  border-radius: 25px;
 `;
