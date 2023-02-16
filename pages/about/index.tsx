@@ -4,8 +4,7 @@ import NameAndRole from "@/components/NameAndRole";
 import { PageWrapper } from "@/styles/styledComponents";
 import React from "react";
 
-// TODO: Currently unused but good to keep around for future changes/testing
-function Home() {
+function About() {
   return (
     <>
       <HtmlHead />
@@ -17,4 +16,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;

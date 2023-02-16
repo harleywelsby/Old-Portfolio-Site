@@ -3,10 +3,8 @@ import "animate.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import {
-  NameText,
   PageWrapper,
   ContentWrapper,
-  RoleText,
   LinkLogoSectionWrapper,
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
