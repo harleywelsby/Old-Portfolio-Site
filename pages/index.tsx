@@ -79,7 +79,7 @@ function Homepage() {
             <LinkLogo
               iconName={faBook}
               link={CodeUrl}
-              label="About Me"
+              label="Site Code"
               isUserOnMobile={isUserOnMobile}
             />
           </LinkLogoSectionWrapper>
