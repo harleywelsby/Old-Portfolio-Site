@@ -52,11 +52,6 @@ export const LinkLogoWrapper = styled.div`
   align-items: center;
 `;
 
-export const LinkLogoLabel = styled.p`
-  margin-top: 1rem;
-  color: #fff;
-`;
-
 export const CaptchaContainer = styled.div`
   align-items: center;
   justify-content: center;

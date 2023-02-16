@@ -10,8 +10,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.linkLogo {
+.linkLogoHover {
   color: #ffaa4c;
+}
+
+.linkLogoText {
+  color: #fff;
+}
+
+.labelMargin {
+  margin-top: 0.5rem;
 }
 
 a {

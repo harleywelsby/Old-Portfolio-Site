@@ -67,16 +67,19 @@ function Homepage() {
             <LinkLogo
               iconName={faLinkedin}
               link={LinkedinUrl}
+              label="LinkedIn"
               isUserOnMobile={isUserOnMobile}
             />
             <LinkLogo
               iconName={faGithub}
               link={GithubUrl}
+              label="GitHub"
               isUserOnMobile={isUserOnMobile}
             />
             <LinkLogo
               iconName={faBook}
               link={CodeUrl}
+              label="About Me"
               isUserOnMobile={isUserOnMobile}
             />
           </LinkLogoSectionWrapper>
