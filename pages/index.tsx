@@ -13,6 +13,7 @@ import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
 import HtmlHead from "@/components/HtmlHead";
 import { MobileUserContext } from "@/components/MobileUserContext";
+import NameAndRole from "@/components/NameAndRole";
 
 function Homepage() {
   const { isUserOnMobile } = useContext(MobileUserContext);
@@ -44,14 +45,7 @@ function Homepage() {
         <ContentWrapper>
           {/* Name and Title */}
           <div className="animate__bounceIn">
-            <ContentWrapper>
-              <NameText
-                className={isUserOnMobile ? "mobileNameText" : "webNameText"}
-              >
-                Harley Welsby
-              </NameText>
-              <RoleText>Full-Stack Software Developer</RoleText>
-            </ContentWrapper>
+            <NameAndRole />
           </div>
           {/* Link logos */}
           <div className="animate__bounceIn">

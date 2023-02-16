@@ -1,6 +1,12 @@
 import HtmlHead from "@/components/HtmlHead";
 import { MobileUserContext } from "@/components/MobileUserContext";
-import { PageWrapper } from "@/styles/styledComponents";
+import NameAndRole from "@/components/NameAndRole";
+import {
+  ContentWrapper,
+  NameText,
+  PageWrapper,
+  RoleText,
+} from "@/styles/styledComponents";
 import React, { useContext } from "react";
 
 // TODO: Currently unused but good to keep around for future changes/testing
@@ -10,9 +16,9 @@ function Home() {
   return (
     <>
       <HtmlHead />
-      <PageWrapper
-        className={isUserOnMobile ? "mobilePageWrapper" : ""}
-      ></PageWrapper>
+      <PageWrapper className={isUserOnMobile ? "mobilePageWrapper" : ""}>
+        <NameAndRole />
+      </PageWrapper>
     </>
   );
 }
