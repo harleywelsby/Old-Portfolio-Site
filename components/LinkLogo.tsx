@@ -20,6 +20,9 @@ function LinkLogo({
   newTab,
   isUserOnMobile,
 }: LinkLogoProps) {
+  // Custom hover check. We don't use :hover in CSS for this
+  // as doing it custom can make both the icon and label change
+  // colour at the same time.
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
@@ -31,15 +34,15 @@ function LinkLogo({
         <FontAwesomeIcon
           icon={iconName}
           size={isUserOnMobile ? "4x" : "5x"}
-          className={isHover ? "linkLogoHover" : ""}
+          className={`${isHover && "linkLogoHover"}`}
           color="white"
         />
         <p
-          className={
-            isHover ? "linkLogoHover labelMargin" : "linkLogoText labelMargin"
-          }
+          className={`labelMargin ${
+            isHover ? "linkLogoHover" : "linkLogoText"
+          }`}
         >
-          {label || null}
+          {label}
         </p>
       </LinkLogoWrapper>
     </a>

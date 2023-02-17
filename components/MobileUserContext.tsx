@@ -8,12 +8,10 @@ const MobileUserContextDefaultValue = {
 // Handles sharing of whether a user is on mobile, to switch between web and mobile view.
 export const MobileUserContext = createContext(MobileUserContextDefaultValue);
 export const MobileUserContextProvider = ({ children }: any) => {
-  // Whether user is on mobile. Stored in a useState
-  // as the window isn't rendered immediately.
-  // https://stackoverflow.com/questions/63536562/reference-errornavigator-not-defined-with-nextjs
   const [isUserOnMobile, setIsUserOnMobile] = useState<boolean>(false);
 
-  // Get whether a user is on mobile, once window is defined
+  // Get whether a user is on mobile. Must be done in a useEffect as window isn't defined immediately.
+  // https://stackoverflow.com/questions/63536562/reference-errornavigator-not-defined-with-nextjs
   useEffect(() => {
     setIsUserOnMobile(
       !!window.navigator.userAgent.match(/iphone|android|blackberry/gi) || false
