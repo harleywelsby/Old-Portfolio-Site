@@ -59,12 +59,3 @@ a {
 .webNameText {
   font-size: 90px;
 }
-
-.mobileCaptchaText {
-  font-size: 30px;
-  width: 90%;
-}
-
-.webCaptchaText {
-  width: 25%;
-}

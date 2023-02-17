@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "animate.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBook, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import {
   PageWrapper,
   ContentWrapper,
@@ -27,7 +27,6 @@ function Homepage() {
       <HtmlHead />
       <PageWrapper className={isUserOnMobile ? "mobilePageWrapper" : ""}>
         <ContentWrapper>
-          {/* Photo */}
           <div className="animate__bounceIn">
             <Image
               className={`profilePhoto ${
@@ -42,11 +41,9 @@ function Homepage() {
           </div>
         </ContentWrapper>
         <ContentWrapper>
-          {/* Name and Title */}
           <div className="animate__bounceIn">
             <NameAndRole />
           </div>
-          {/* Link logos */}
           <div className="animate__bounceIn">
             <LinkLogoSectionWrapper>
               <LinkLogo

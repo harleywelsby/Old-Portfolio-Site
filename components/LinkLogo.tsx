@@ -12,6 +12,7 @@ interface LinkLogoProps {
   isUserOnMobile: boolean | RegExpMatchArray;
 }
 
+// Icon/Logo with a label and link to a given URL.
 function LinkLogo({
   iconName,
   link,

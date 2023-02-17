@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 
-// Handles meta info for the site
+// Handles meta info for the site.
 function HtmlHead() {
   return (
     <Head>

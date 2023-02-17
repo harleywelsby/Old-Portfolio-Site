@@ -5,7 +5,7 @@ const MobileUserContextDefaultValue = {
   setIsUserOnMobile: (state: boolean) => {},
 };
 
-// Handles sharing of the isUserHuman state between pages, to verify captcha
+// Handles sharing of whether a user is on mobile, to switch between web and mobile view.
 export const MobileUserContext = createContext(MobileUserContextDefaultValue);
 export const MobileUserContextProvider = ({ children }: any) => {
   // Whether user is on mobile. Stored in a useState

@@ -2,7 +2,7 @@ import { ContentWrapper, NameText, RoleText } from "@/styles/styledComponents";
 import React, { useContext } from "react";
 import { MobileUserContext } from "./MobileUserContext";
 
-// Handles meta info for the site
+// Box containing name and role as a title and subtitle, for page headers.
 function NameAndRole() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
