@@ -39,6 +39,7 @@ function Homepage() {
               width={480}
               height={630}
               priority={true}
+              loading="eager"
             />
           </div>
         </ContentWrapper>
