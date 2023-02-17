@@ -12,20 +12,22 @@ import Image from "next/image";
 import HtmlHead from "@/components/HtmlHead";
 import { MobileUserContext } from "@/components/MobileUserContext";
 import NameAndRole from "@/components/NameAndRole";
+import {
+  CodeLabel,
+  CodeUrl,
+  GithubLabel,
+  GithubUrl,
+  LinkedinLabel,
+  LinkedinUrl,
+} from "@/components/constants";
 
 function Homepage() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
-  // Links for link logos
-  const LinkedinUrl = "https://www.linkedin.com/in/harleywelsby/";
-  const GithubUrl = "https://github.com/harleywelsby";
-  const CodeUrl = "https://github.com/harleywelsby/harleywelsby-dev";
-  const AboutUrl = "/about";
-
   return (
     <>
       <HtmlHead />
-      <PageWrapper className={isUserOnMobile ? "mobilePageWrapper" : ""}>
+      <PageWrapper className={`${isUserOnMobile && "mobilePageWrapper"}`}>
         <ContentWrapper>
           <div className="animate__bounceIn">
             <Image
@@ -49,21 +51,21 @@ function Homepage() {
               <LinkLogo
                 iconName={faLinkedin}
                 link={LinkedinUrl}
-                label="LinkedIn"
+                label={LinkedinLabel}
                 newTab
                 isUserOnMobile={isUserOnMobile}
               />
               <LinkLogo
                 iconName={faGithub}
                 link={GithubUrl}
-                label="GitHub"
+                label={GithubLabel}
                 newTab
                 isUserOnMobile={isUserOnMobile}
               />
               <LinkLogo
                 iconName={faLaptopCode}
                 link={CodeUrl}
-                label="Site Code"
+                label={CodeLabel}
                 newTab
                 isUserOnMobile={isUserOnMobile}
               />
