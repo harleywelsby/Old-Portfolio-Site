@@ -3,6 +3,7 @@ import "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { LinkLogoWrapper } from "../styles/styledComponents";
+import Link from "next/link";
 
 interface LinkLogoProps {
   iconName: IconDefinition;
@@ -26,7 +27,7 @@ function LinkLogo({
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <a href={link} target={newTab ? "_blank" : ""} rel="noreferrer">
+    <Link href={link} target={newTab ? "_blank" : ""} rel="noreferrer">
       <LinkLogoWrapper
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
@@ -45,7 +46,7 @@ function LinkLogo({
           {label}
         </p>
       </LinkLogoWrapper>
-    </a>
+    </Link>
   );
 }
 

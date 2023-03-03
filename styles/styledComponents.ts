@@ -65,10 +65,24 @@ export const CaptchaText = styled.h1<ICrossPlatformComponent>`
   text-align: center;
 `;
 
-export const InfoBoxText = styled.p`
+export const InfoBoxContent = styled.p`
   width: 80%;
   text-align: center;
   padding: 20px;
   border: solid;
   border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const FlexColumn = styled.p`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DescriptionText = styled.p`
+  font-size: 25px;
+  margin: 0.5;
+  text-align: center;
+  padding: 5px;
 `;
