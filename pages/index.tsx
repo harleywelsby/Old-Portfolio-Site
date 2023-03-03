@@ -67,7 +67,6 @@ function Homepage() {
                 iconName={faLaptopCode}
                 link={CodeUrl}
                 label={CodeLabel}
-                newTab
                 isUserOnMobile={isUserOnMobile}
               />
             </LinkLogoSectionWrapper>
