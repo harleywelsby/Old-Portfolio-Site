@@ -5,10 +5,11 @@ import {
   InfoBoxContent,
   NameText,
 } from "@/styles/styledComponents";
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import LinkLogo from "./LinkLogo";
+import { MobileUserContext } from "./MobileUserContext";
 
 interface ProjectInfoBoxProps {
   title: string;
@@ -23,21 +24,42 @@ function ProjectInfoBox({
   imagePath,
   link,
 }: ProjectInfoBoxProps) {
+  const { isUserOnMobile } = useContext(MobileUserContext);
+
   return (
     <ContentWrapper>
       <InfoBoxContent>
-        <Image
-          className="profilePhoto"
-          src={imagePath}
-          alt="ProjectDemo"
-          width={300}
-          height={300}
-          priority={true}
-          loading="eager"
-        />
+        {!isUserOnMobile && (
+          <Image
+            className="profilePhoto selfCenter"
+            src={imagePath}
+            alt="ProjectDemo"
+            width={300}
+            height={300}
+            priority={true}
+            loading="eager"
+          />
+        )}
         <FlexColumn>
-          <NameText className="mobileNameText">{title} </NameText>
-          <DescriptionText>{description}</DescriptionText>
+          <NameText>{title}</NameText>
+          <DescriptionText
+            className={
+              isUserOnMobile ? "mobileDescriptionText" : "webDescriptionText"
+            }
+          >
+            {description}
+          </DescriptionText>
+          {isUserOnMobile && (
+            <Image
+              className="profilePhoto selfCenter negativeMarginRight"
+              src={imagePath}
+              alt="ProjectDemo"
+              width={250}
+              height={250}
+              priority={true}
+              loading="eager"
+            />
+          )}
         </FlexColumn>
         <LinkLogo iconName={faGithub} link={link} size={"2x"} newTab />
       </InfoBoxContent>

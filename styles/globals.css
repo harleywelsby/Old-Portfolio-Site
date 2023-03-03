@@ -39,6 +39,14 @@ a {
   padding: 20px;
 }
 
+.selfCenter {
+  align-self: center;
+}
+
+.negativeMarginRight {
+  margin-right: -2rem;
+}
+
 /* Mobile and Web Specific Styles */
 
 .mobilePageWrapper {
@@ -62,4 +70,14 @@ a {
 
 .webNameText {
   font-size: 90px;
+}
+
+.mobileDescriptionText {
+  font-size: 15px;
+  width: 90%;
+}
+
+.webDescriptionText {
+  font-size: 25px;
+  padding: 5px;
 }

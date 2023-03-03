@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "animate.css";
 
 interface ICrossPlatformComponent {
-  className: string;
+  className?: string;
 }
 
 export const PageWrapper = styled.div<ICrossPlatformComponent>`
@@ -85,8 +85,6 @@ export const FlexRow = styled.div`
 `;
 
 export const DescriptionText = styled.p`
-  font-size: 25px;
-  margin: 0.5;
+  margin: 2rem;
   text-align: center;
-  padding: 5px;
 `;
