@@ -75,7 +75,7 @@ export const InfoBoxContent = styled.p`
   flex-direction: row;
 `;
 
-export const FlexColumn = styled.p`
+export const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
 `;
