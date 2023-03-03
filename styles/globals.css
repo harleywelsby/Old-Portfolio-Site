@@ -47,6 +47,10 @@ a {
   margin-right: -2rem;
 }
 
+.whiteOutline {
+  border: 5px solid #fff;
+}
+
 /* Mobile and Web Specific Styles */
 
 .mobilePageWrapper {

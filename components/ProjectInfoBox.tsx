@@ -31,7 +31,7 @@ function ProjectInfoBox({
       <InfoBoxContent>
         {!isUserOnMobile && (
           <Image
-            className="profilePhoto selfCenter"
+            className="profilePhoto selfCenter whiteOutline"
             src={imagePath}
             alt="ProjectDemo"
             width={300}
@@ -51,7 +51,7 @@ function ProjectInfoBox({
           </DescriptionText>
           {isUserOnMobile && (
             <Image
-              className="profilePhoto selfCenter negativeMarginRight"
+              className="profilePhoto selfCenter negativeMarginRight whiteOutline"
               src={imagePath}
               alt="ProjectDemo"
               width={250}
