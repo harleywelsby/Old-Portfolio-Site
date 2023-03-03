@@ -43,10 +43,6 @@ a {
   align-self: center;
 }
 
-.negativeMarginRight {
-  margin-right: -2rem;
-}
-
 .whiteOutline {
   border: 5px solid #fff;
 }
