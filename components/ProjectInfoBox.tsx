@@ -27,7 +27,7 @@ function ProjectInfoBox({
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
-    <ContentWrapper>
+    <ContentWrapper className="basePadding">
       <InfoBoxContent>
         {!isUserOnMobile && (
           <Image

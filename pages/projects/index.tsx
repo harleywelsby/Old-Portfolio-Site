@@ -6,12 +6,15 @@ import {
   BlueAvocadoGithubLink,
   BlueAvocadoImage,
   BlueAvocadoTitle,
-  GithubUrl,
-  LinkedinUrl,
-} from "@/components/constants";
+  HwDevDescription,
+  HwDevGithubLink,
+  HwDevImage,
+  HwDevTitle,
+} from "@/components/projectsConstants";
 import LinkLogo from "@/components/LinkLogo";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { GithubUrl, LinkedinUrl } from "@/components/constants";
 
 function Projects() {
   return (
@@ -39,6 +42,12 @@ function Projects() {
         description={BlueAvocadoDescription}
         imagePath={BlueAvocadoImage}
         link={BlueAvocadoGithubLink}
+      />
+      <ProjectInfoBox
+        title={HwDevTitle}
+        description={HwDevDescription}
+        imagePath={HwDevImage}
+        link={HwDevGithubLink}
       />
     </PageWrapper>
   );
