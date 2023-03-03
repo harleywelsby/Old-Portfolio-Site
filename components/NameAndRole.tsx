@@ -1,6 +1,6 @@
 import { ContentWrapper, NameText, RoleText } from "@/styles/styledComponents";
 import React, { useContext } from "react";
-import { MobileUserContext } from "./MobileUserContext";
+import { MobileUserContext } from "./context/MobileUserContext";
 
 // Box containing name and role as a title and subtitle, for page headers.
 function NameAndRole() {

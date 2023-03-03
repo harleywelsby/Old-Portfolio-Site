@@ -8,17 +8,11 @@ import {
 import React, { useContext } from "react";
 import Image from "next/image";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import LinkLogo from "./LinkLogo";
-import { MobileUserContext } from "./MobileUserContext";
+import LinkLogo from "../LinkLogo";
+import { MobileUserContext } from "../context/MobileUserContext";
+import { ProjectInfoBoxProps } from "./ProjectInfoBoxProps";
 
-interface ProjectInfoBoxProps {
-  title: string;
-  description: string;
-  imagePath: string;
-  link: string;
-}
-
-function ProjectInfoBox({
+function MobileProjectInfoBox({
   title,
   description,
   imagePath,
@@ -42,6 +36,13 @@ function ProjectInfoBox({
         )}
         <FlexColumn>
           <NameText>{title}</NameText>
+          <LinkLogo
+            iconName={faGithub}
+            link={link}
+            size={"2x"}
+            newTab
+            padding
+          />
           <DescriptionText
             className={
               isUserOnMobile ? "mobileDescriptionText" : "webDescriptionText"
@@ -61,10 +62,9 @@ function ProjectInfoBox({
             />
           )}
         </FlexColumn>
-        <LinkLogo iconName={faGithub} link={link} size={"2x"} newTab />
       </InfoBoxContent>
     </ContentWrapper>
   );
 }
 
-export default ProjectInfoBox;
+export default MobileProjectInfoBox;
