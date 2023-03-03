@@ -3,13 +3,15 @@ import "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { LinkLogoWrapper } from "../styles/styledComponents";
+import Link from "next/link";
 
 interface LinkLogoProps {
   iconName: IconDefinition;
   link: string;
   label?: string;
   newTab?: boolean;
-  isUserOnMobile: boolean | RegExpMatchArray;
+  size: "1x" | "2x" | "3x" | "4x" | "5x";
+  padding?: boolean;
 }
 
 // Icon/Logo with a label and link to a given URL.
@@ -18,7 +20,8 @@ function LinkLogo({
   link,
   label,
   newTab,
-  isUserOnMobile,
+  size,
+  padding,
 }: LinkLogoProps) {
   // Custom hover check. We don't use :hover in CSS for this
   // as doing it custom can make both the icon and label change
@@ -26,14 +29,15 @@ function LinkLogo({
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <a href={link} target={newTab ? "_blank" : ""} rel="noreferrer">
+    <Link href={link} target={newTab ? "_blank" : ""} rel="noreferrer">
       <LinkLogoWrapper
+        className={`${padding && "basePadding"}`}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
         <FontAwesomeIcon
           icon={iconName}
-          size={isUserOnMobile ? "4x" : "5x"}
+          size={size}
           className={`${isHover && "linkLogoHover"}`}
           color="white"
         />
@@ -45,7 +49,7 @@ function LinkLogo({
           {label}
         </p>
       </LinkLogoWrapper>
-    </a>
+    </Link>
   );
 }
 

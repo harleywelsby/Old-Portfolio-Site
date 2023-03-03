@@ -54,21 +54,23 @@ function Homepage() {
                 link={LinkedinUrl}
                 label={LinkedinLabel}
                 newTab
-                isUserOnMobile={isUserOnMobile}
+                size={isUserOnMobile ? "4x" : "5x"}
+                padding
               />
               <LinkLogo
                 iconName={faGithub}
                 link={GithubUrl}
                 label={GithubLabel}
                 newTab
-                isUserOnMobile={isUserOnMobile}
+                size={isUserOnMobile ? "4x" : "5x"}
+                padding
               />
               <LinkLogo
                 iconName={faLaptopCode}
                 link={CodeUrl}
                 label={CodeLabel}
-                newTab
-                isUserOnMobile={isUserOnMobile}
+                size={isUserOnMobile ? "4x" : "5x"}
+                padding
               />
             </LinkLogoSectionWrapper>
           </div>

@@ -31,8 +31,24 @@ a {
   border-radius: 50px;
 }
 
-.aboutPageWrapper {
+.projectsPageWrapper {
   flex-direction: column;
+}
+
+.basePadding {
+  padding: 20px;
+}
+
+.selfCenter {
+  align-self: center;
+}
+
+.negativeMarginRight {
+  margin-right: -2rem;
+}
+
+.whiteOutline {
+  border: 5px solid #fff;
 }
 
 /* Mobile and Web Specific Styles */
@@ -58,4 +74,14 @@ a {
 
 .webNameText {
   font-size: 90px;
+}
+
+.mobileDescriptionText {
+  font-size: 15px;
+  width: 90%;
+}
+
+.webDescriptionText {
+  font-size: 25px;
+  padding: 5px;
 }

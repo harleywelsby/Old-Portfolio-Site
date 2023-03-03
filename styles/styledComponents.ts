@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "animate.css";
 
 interface ICrossPlatformComponent {
-  className: string;
+  className?: string;
 }
 
 export const PageWrapper = styled.div<ICrossPlatformComponent>`
@@ -45,7 +45,6 @@ export const LinkLogoSectionWrapper = styled.div`
 `;
 
 export const LinkLogoWrapper = styled.div`
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,10 +64,27 @@ export const CaptchaText = styled.h1<ICrossPlatformComponent>`
   text-align: center;
 `;
 
-export const InfoBoxText = styled.p`
+export const InfoBoxContent = styled.div`
   width: 80%;
   text-align: center;
   padding: 20px;
   border: solid;
   border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const DescriptionText = styled.p`
+  margin: 2rem;
+  text-align: center;
 `;
