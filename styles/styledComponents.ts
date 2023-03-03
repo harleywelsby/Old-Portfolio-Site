@@ -79,6 +79,11 @@ export const FlexColumn = styled.div`
   flex-direction: column;
 `;
 
+export const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const DescriptionText = styled.p`
   font-size: 25px;
   margin: 0.5;
