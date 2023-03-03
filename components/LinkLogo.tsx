@@ -10,7 +10,8 @@ interface LinkLogoProps {
   link: string;
   label?: string;
   newTab?: boolean;
-  isUserOnMobile: boolean | RegExpMatchArray;
+  size: "2x" | "4x" | "5x";
+  padding?: boolean;
 }
 
 // Icon/Logo with a label and link to a given URL.
@@ -19,7 +20,8 @@ function LinkLogo({
   link,
   label,
   newTab,
-  isUserOnMobile,
+  size,
+  padding,
 }: LinkLogoProps) {
   // Custom hover check. We don't use :hover in CSS for this
   // as doing it custom can make both the icon and label change
@@ -29,12 +31,13 @@ function LinkLogo({
   return (
     <Link href={link} target={newTab ? "_blank" : ""} rel="noreferrer">
       <LinkLogoWrapper
+        className={`${padding && "linkLogoPadding"}`}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
         <FontAwesomeIcon
           icon={iconName}
-          size={isUserOnMobile ? "4x" : "5x"}
+          size={size}
           className={`${isHover && "linkLogoHover"}`}
           color="white"
         />

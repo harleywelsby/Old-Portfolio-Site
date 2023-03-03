@@ -3,6 +3,7 @@ import { PageWrapper } from "@/styles/styledComponents";
 import ProjectInfoBox from "@/components/ProjectInfoBox";
 import {
   BlueAvocadoDescription,
+  BlueAvocadoGithubLink,
   BlueAvocadoImage,
   BlueAvocadoTitle,
 } from "@/components/constants";
@@ -14,6 +15,7 @@ function Projects() {
         title={BlueAvocadoTitle}
         description={BlueAvocadoDescription}
         imagePath={BlueAvocadoImage}
+        link={BlueAvocadoGithubLink}
       />
     </PageWrapper>
   );

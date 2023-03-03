@@ -35,6 +35,10 @@ a {
   flex-direction: column;
 }
 
+.linkLogoPadding {
+  padding: 20px;
+}
+
 /* Mobile and Web Specific Styles */
 
 .mobilePageWrapper {

@@ -7,12 +7,14 @@ import {
 } from "@/styles/styledComponents";
 import React from "react";
 import Image from "next/image";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import LinkLogo from "./LinkLogo";
 
 interface ProjectInfoBoxProps {
   title: string;
   description: string;
   imagePath: string;
-  link?: string;
+  link: string;
 }
 
 function ProjectInfoBox({
@@ -34,9 +36,10 @@ function ProjectInfoBox({
           loading="eager"
         />
         <FlexColumn>
-          <NameText className="mobileNameText">{title}</NameText>
+          <NameText className="mobileNameText">{title} </NameText>
           <DescriptionText>{description}</DescriptionText>
         </FlexColumn>
+        <LinkLogo iconName={faGithub} link={link} size={"2x"} newTab />
       </InfoBoxContent>
     </ContentWrapper>
   );
