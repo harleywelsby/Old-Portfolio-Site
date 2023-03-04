@@ -47,6 +47,10 @@ a {
   border: 5px solid #fff;
 }
 
+.negative1TopMargin {
+  margin-top: -1rem;
+}
+
 /* Mobile and Web Specific Styles */
 
 .mobilePageWrapper {
