@@ -7,7 +7,7 @@ export const BlueAvocadoGithubLink =
 export const BlueAvocadoImage = "/projectDemos/BlueAvocado.png";
 
 // HarleyWelsby.dev
-export const HwDevTitle = "harleywelsby";
+export const HwDevTitle = "harleywelsby.dev";
 export const HwDevDescription =
   "HarleyWelsby.dev is this website! Built using Next.js and TypeScript, this site contains all my contact info, useful links and a project portfolio of my development work.";
 export const HwDevGithubLink =

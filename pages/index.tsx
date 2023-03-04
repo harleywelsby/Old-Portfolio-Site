@@ -10,7 +10,7 @@ import {
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
 import HtmlHead from "@/components/HtmlHead";
-import { MobileUserContext } from "@/components/MobileUserContext";
+import { MobileUserContext } from "@/components/context/MobileUserContext";
 import NameAndRole from "@/components/NameAndRole";
 import {
   CodeLabel,
@@ -19,7 +19,7 @@ import {
   GithubUrl,
   LinkedinLabel,
   LinkedinUrl,
-} from "@/components/constants";
+} from "@/components/constants/constants";
 
 function Homepage() {
   const { isUserOnMobile } = useContext(MobileUserContext);

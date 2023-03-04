@@ -85,6 +85,8 @@ export const FlexRow = styled.div`
 `;
 
 export const DescriptionText = styled.p`
-  margin: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
 `;

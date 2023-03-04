@@ -1,6 +1,6 @@
 import NameAndRole from "@/components/NameAndRole";
 import { FlexRow, PageWrapper } from "@/styles/styledComponents";
-import ProjectInfoBox from "@/components/ProjectInfoBox";
+import ProjectInfoBox from "@/components/projectInfo/ProjectInfoBox";
 import {
   BlueAvocadoDescription,
   BlueAvocadoGithubLink,
@@ -10,13 +10,18 @@ import {
   HwDevGithubLink,
   HwDevImage,
   HwDevTitle,
-} from "@/components/projectsConstants";
+} from "@/components/constants/projectsConstants";
 import LinkLogo from "@/components/LinkLogo";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { GithubUrl, LinkedinUrl } from "@/components/constants";
+import { GithubUrl, LinkedinUrl } from "@/components/constants/constants";
+import { useContext } from "react";
+import { MobileUserContext } from "@/components/context/MobileUserContext";
+import MobileProjectInfoBox from "@/components/projectInfo/MobileProjectInfoBox";
 
 function Projects() {
+  const { isUserOnMobile } = useContext(MobileUserContext);
+
   return (
     <PageWrapper className={"projectsPageWrapper"}>
       <NameAndRole />
@@ -37,18 +42,38 @@ function Projects() {
           newTab
         />
       </FlexRow>
-      <ProjectInfoBox
-        title={BlueAvocadoTitle}
-        description={BlueAvocadoDescription}
-        imagePath={BlueAvocadoImage}
-        link={BlueAvocadoGithubLink}
-      />
-      <ProjectInfoBox
-        title={HwDevTitle}
-        description={HwDevDescription}
-        imagePath={HwDevImage}
-        link={HwDevGithubLink}
-      />
+      {isUserOnMobile && (
+        <div>
+          <MobileProjectInfoBox
+            title={BlueAvocadoTitle}
+            description={BlueAvocadoDescription}
+            imagePath={BlueAvocadoImage}
+            link={BlueAvocadoGithubLink}
+          />
+          <MobileProjectInfoBox
+            title={HwDevTitle}
+            description={HwDevDescription}
+            imagePath={HwDevImage}
+            link={HwDevGithubLink}
+          />
+        </div>
+      )}
+      {!isUserOnMobile && (
+        <div>
+          <ProjectInfoBox
+            title={BlueAvocadoTitle}
+            description={BlueAvocadoDescription}
+            imagePath={BlueAvocadoImage}
+            link={BlueAvocadoGithubLink}
+          />
+          <ProjectInfoBox
+            title={HwDevTitle}
+            description={HwDevDescription}
+            imagePath={HwDevImage}
+            link={HwDevGithubLink}
+          />
+        </div>
+      )}
     </PageWrapper>
   );
 }
