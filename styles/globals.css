@@ -72,9 +72,12 @@ a {
   font-size: 90px;
 }
 
+.mobileProjectNameText {
+  font-size: 25px;
+}
+
 .mobileDescriptionText {
-  font-size: 15px;
-  width: 90%;
+  font-size: 12px;
 }
 
 .webDescriptionText {
