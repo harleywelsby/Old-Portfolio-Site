@@ -36,8 +36,8 @@ function MobileProjectInfoBox({
             className="profilePhoto selfCenter whiteOutline"
             src={imagePath}
             alt="ProjectDemo"
-            width={250}
-            height={250}
+            width={200}
+            height={200}
             priority={true}
             loading="eager"
           />
