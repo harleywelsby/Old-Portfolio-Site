@@ -7,7 +7,7 @@ interface ICrossPlatformComponent {
 
 export const PageWrapper = styled.div<ICrossPlatformComponent>`
   background-color: #282a3a;
-  min-height: 98vh;
+  min-height: 96vh;
   display: flex;
   align-items: center;
   justify-content: center;

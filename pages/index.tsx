@@ -36,8 +36,8 @@ function Homepage() {
               }`}
               src="/harleyProfile.jpg"
               alt="ProfilePhoto"
-              width={480}
-              height={630}
+              width={474}
+              height={600}
               priority={true}
               loading="eager"
             />
