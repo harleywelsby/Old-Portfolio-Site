@@ -20,7 +20,7 @@
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "styled-components": "^5.3.9",
-    "typescript": "5.0.3"
+    "typescript": "5.0.4"
   },
   "scripts": {
     "dev": "next dev",
