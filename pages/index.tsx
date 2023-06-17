@@ -11,8 +11,8 @@ import {
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
-import HtmlHead from "@/components/meta/HtmlHead";
-import { MobileUserContext } from "@/components/context/MobileUserContext";
+import HtmlHead from "@/components/HtmlHead";
+import { MobileUserContext } from "@/components/MobileUserContext";
 import {
   CodeLabel,
   CodeUrl,

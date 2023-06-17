@@ -4,7 +4,7 @@ import {
   NameText,
   ProjectsPageWrapper,
 } from "@/styles/styledComponents";
-import ProjectInfoBox from "@/components/projects/ProjectInfoBox";
+import ProjectInfoBox from "@/components/ProjectInfoBox";
 import {
   BlueAvocadoDescription,
   BlueAvocadoGithubLink,
@@ -20,7 +20,7 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { GithubUrl, LinkedinUrl } from "@/components/constants/constants";
 import { useContext } from "react";
-import { MobileUserContext } from "@/components/context/MobileUserContext";
+import { MobileUserContext } from "@/components/MobileUserContext";
 
 function Projects() {
   const { isUserOnMobile } = useContext(MobileUserContext);

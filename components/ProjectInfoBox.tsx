@@ -8,8 +8,8 @@ import {
 import React, { useContext } from "react";
 import Image from "next/image";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import LinkLogo from "../LinkLogo";
-import { MobileUserContext } from "../context/MobileUserContext";
+import LinkLogo from "./LinkLogo";
+import { MobileUserContext } from "./MobileUserContext";
 
 interface ProjectInfoBoxProps {
   title: string;
