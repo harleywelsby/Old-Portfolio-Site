@@ -39,12 +39,16 @@ a {
   padding: 20px;
 }
 
+.projectBoxPadding {
+  padding: 3px;
+}
+
 .selfCenter {
   align-self: center;
 }
 
 .whiteOutline {
-  border: 5px solid #fff;
+  border: 2px solid #fff;
 }
 
 .negative1TopMargin {

@@ -18,7 +18,7 @@ function ProjectInfoBox({
   link,
 }: ProjectInfoBoxProps) {
   return (
-    <ContentWrapper className="basePadding">
+    <ContentWrapper className="projectBoxPadding">
       <InfoBoxContent>
         <Image
           className="profilePhoto selfCenter whiteOutline"

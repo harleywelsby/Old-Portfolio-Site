@@ -1,5 +1,9 @@
-import NameAndRole from "@/components/NameAndRole";
-import { FlexRow, PageWrapper } from "@/styles/styledComponents";
+import {
+  ContentWrapper,
+  FlexRow,
+  NameText,
+  PageWrapper,
+} from "@/styles/styledComponents";
 import ProjectInfoBox from "@/components/projectInfo/ProjectInfoBox";
 import {
   BlueAvocadoDescription,
@@ -24,7 +28,11 @@ function Projects() {
 
   return (
     <PageWrapper className={"projectsPageWrapper"}>
-      <NameAndRole />
+      <ContentWrapper>
+        <NameText className={isUserOnMobile ? "mobileNameText" : "webNameText"}>
+          Projects
+        </NameText>
+      </ContentWrapper>
       <FlexRow>
         <LinkLogo iconName={faHouse} link="/" padding size="2x" />
         <LinkLogo

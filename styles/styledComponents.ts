@@ -68,7 +68,7 @@ export const InfoBoxContent = styled.div`
   width: 80%;
   text-align: center;
   padding: 20px;
-  border: solid;
+  border: 1.5px solid;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
