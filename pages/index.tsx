@@ -3,7 +3,7 @@ import "animate.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import {
-  PageWrapper,
+  HomePageWrapper,
   ContentWrapper,
   LinkLogoSectionWrapper,
   NameText,
@@ -28,7 +28,7 @@ function Homepage() {
   return (
     <>
       <HtmlHead />
-      <PageWrapper isMobile={isUserOnMobile}>
+      <HomePageWrapper isMobile={isUserOnMobile}>
         <ContentWrapper>
           <div className="animate__bounceIn">
             <Image
@@ -81,7 +81,7 @@ function Homepage() {
             </LinkLogoSectionWrapper>
           </div>
         </ContentWrapper>
-      </PageWrapper>
+      </HomePageWrapper>
     </>
   );
 }

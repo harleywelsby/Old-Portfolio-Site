@@ -6,7 +6,7 @@ interface ICrossPlatformComponent {
   isMobile?: boolean;
 }
 
-export const PageWrapper = styled.div<ICrossPlatformComponent>`
+export const HomePageWrapper = styled.div<ICrossPlatformComponent>`
   background-color: #282a3a;
   min-height: 96vh;
   display: flex;
@@ -15,6 +15,17 @@ export const PageWrapper = styled.div<ICrossPlatformComponent>`
   font-size: calc(10px + 2vmin);
   color: white;
   flex-direction: ${(props) => (props.isMobile ? "column-reverse" : "row")};
+`;
+
+export const ProjectsPageWrapper = styled.div`
+  background-color: #282a3a;
+  min-height: 96vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  flex-direction: column;
 `;
 
 export const NameText = styled.h1<ICrossPlatformComponent>`

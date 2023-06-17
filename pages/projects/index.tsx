@@ -2,7 +2,7 @@ import {
   ContentWrapper,
   FlexRow,
   NameText,
-  PageWrapper,
+  ProjectsPageWrapper,
 } from "@/styles/styledComponents";
 import ProjectInfoBox from "@/components/projects/ProjectInfoBox";
 import {
@@ -27,11 +27,9 @@ function Projects() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
-    <PageWrapper className={"projectsPageWrapper"}>
+    <ProjectsPageWrapper>
       <ContentWrapper>
-        <NameText className={isUserOnMobile ? "smallTitle" : "bigTitle"}>
-          Projects
-        </NameText>
+        <NameText isMobile={isUserOnMobile}>Projects</NameText>
       </ContentWrapper>
       <FlexRow>
         <LinkLogo iconName={faHouse} link="/" padding size="2x" />
@@ -82,7 +80,7 @@ function Projects() {
           />
         </div>
       )}
-    </PageWrapper>
+    </ProjectsPageWrapper>
   );
 }
 
