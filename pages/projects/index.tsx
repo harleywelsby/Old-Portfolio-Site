@@ -21,7 +21,6 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { GithubUrl, LinkedinUrl } from "@/components/constants/constants";
 import { useContext } from "react";
 import { MobileUserContext } from "@/components/context/MobileUserContext";
-import MobileProjectInfoBox from "@/components/projects/MobileProjectInfoBox";
 
 function Projects() {
   const { isUserOnMobile } = useContext(MobileUserContext);
@@ -48,38 +47,20 @@ function Projects() {
           newTab
         />
       </FlexRow>
-      {isUserOnMobile && (
-        <div>
-          <MobileProjectInfoBox
-            title={BlueAvocadoTitle}
-            description={BlueAvocadoDescription}
-            imagePath={BlueAvocadoImage}
-            link={BlueAvocadoGithubLink}
-          />
-          <MobileProjectInfoBox
-            title={HwDevTitle}
-            description={HwDevDescription}
-            imagePath={HwDevImage}
-            link={HwDevGithubLink}
-          />
-        </div>
-      )}
-      {!isUserOnMobile && (
-        <div>
-          <ProjectInfoBox
-            title={BlueAvocadoTitle}
-            description={BlueAvocadoDescription}
-            imagePath={BlueAvocadoImage}
-            link={BlueAvocadoGithubLink}
-          />
-          <ProjectInfoBox
-            title={HwDevTitle}
-            description={HwDevDescription}
-            imagePath={HwDevImage}
-            link={HwDevGithubLink}
-          />
-        </div>
-      )}
+      <div>
+        <ProjectInfoBox
+          title={BlueAvocadoTitle}
+          description={BlueAvocadoDescription}
+          imagePath={BlueAvocadoImage}
+          link={BlueAvocadoGithubLink}
+        />
+        <ProjectInfoBox
+          title={HwDevTitle}
+          description={HwDevDescription}
+          imagePath={HwDevImage}
+          link={HwDevGithubLink}
+        />
+      </div>
     </ProjectsPageWrapper>
   );
 }
