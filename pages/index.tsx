@@ -20,13 +20,16 @@ import {
   LinkedinLabel,
   LinkedinUrl,
 } from "@/components/constants/constants";
+import Head from "next/head";
 
 function Homepage() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
     <>
-      <title>Harley Welsby | Home</title>
+      <Head>
+        <title>Harley Welsby | Home</title>
+      </Head>
       <HomePageWrapper isMobile={isUserOnMobile}>
         <ContentWrapper>
           <div className="animate__bounceIn">

@@ -21,13 +21,16 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { GithubUrl, LinkedinUrl } from "@/components/constants/constants";
 import { useContext } from "react";
 import { MobileUserContext } from "@/components/MobileUserContext";
+import Head from "next/head";
 
 function Projects() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
     <>
-      <title>Harley Welsby | Projects</title>
+      <Head>
+        <title>Harley Welsby | Projects</title>
+      </Head>
       <ProjectsPageWrapper>
         <ContentWrapper>
           <NameText isMobile={isUserOnMobile}>Projects</NameText>
