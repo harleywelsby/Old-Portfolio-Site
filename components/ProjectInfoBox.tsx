@@ -28,7 +28,7 @@ function ProjectInfoBox({
 
   return (
     <ProjectInfoBoxWrapper>
-      <InfoBoxContent>
+      <InfoBoxContent isMobile={isUserOnMobile}>
         {!isUserOnMobile && (
           <Image
             /* Styles are different here as styled components 

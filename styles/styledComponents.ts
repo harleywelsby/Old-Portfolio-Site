@@ -68,12 +68,13 @@ export const RoleText = styled.p`
 export const ProjectTitleText = styled.h1<ICrossPlatformComponent>`
   display: contents;
   color: #ffaa4c;
+  text-align: ${(props) => (props.isMobile ? "center" : "left")};
   font-size: ${(props) => (props.isMobile ? "25px" : "50px")};
 `;
 
 export const DescriptionText = styled.p<ICrossPlatformComponent>`
   margin-top: ${(props) => (props.isMobile ? "-1.5rem" : "0rem")};
-  margin-left: 0.2rem;
+  margin-left: ${(props) => (props.isMobile ? "0.2rem" : "-0.2rem")};
   margin-right: 0.2rem;
   margin-bottom: 1rem;
   text-align: ${(props) => (props.isMobile ? "center" : "left")};
@@ -113,9 +114,9 @@ export const CaptchaText = styled.h1<ICrossPlatformComponent>`
   text-align: center;
 `;
 
-export const InfoBoxContent = styled.div`
+export const InfoBoxContent = styled.div<ICrossPlatformComponent>`
   width: 80%;
-  text-align: center;
+  text-align: ${(props) => (props.isMobile ? "center" : "left")};
   padding: 20px;
   border: 1.5px solid;
   border-radius: 25px;
