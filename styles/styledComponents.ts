@@ -40,13 +40,13 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const ProjectInfoBoxWrapper = styled.div<ICrossPlatformComponent>`
+export const ProjectInfoBoxWrapper = styled.div`
   font-family: "Trebuchet MS", sans-serif;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: ${(props) => (props.isMobile ? "20px" : "3px")};
+  padding: 3px;
 `;
 
 /******************************
@@ -69,13 +69,14 @@ export const ProjectTitleText = styled.h1<ICrossPlatformComponent>`
   display: contents;
   color: #ffaa4c;
   font-size: ${(props) => (props.isMobile ? "25px" : "50px")};
-`; // TODO
+`;
 
 export const DescriptionText = styled.p<ICrossPlatformComponent>`
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-top: ${(props) => (props.isMobile ? "-1.5rem" : "0rem")};
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: 1rem;
+  text-align: ${(props) => (props.isMobile ? "center" : "left")};
   font-size: ${(props) => (props.isMobile ? "12px" : "25px")};
   padding: ${(props) => (props.isMobile ? "0px" : "5px")};
 `;

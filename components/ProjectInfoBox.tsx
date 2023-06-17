@@ -27,7 +27,7 @@ function ProjectInfoBox({
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
-    <ProjectInfoBoxWrapper isMobile={isUserOnMobile}>
+    <ProjectInfoBoxWrapper>
       <InfoBoxContent>
         {!isUserOnMobile && (
           <Image
@@ -58,6 +58,8 @@ function ProjectInfoBox({
           </DescriptionText>
           {isUserOnMobile && (
             <Image
+              /* Styles are different here as styled components 
+                 can't build on top of the next/Image component */
               className="profilePhoto mobileProjectPhoto selfCenter whiteOutline"
               src={imagePath}
               alt="ProjectDemo"
