@@ -24,12 +24,18 @@ html {
   margin-right: 0rem;
 }
 
-.mobileProjectPhoto {
-  margin-right: 0rem;
+.projectPhoto {
+  display: flex;
+  border-radius: 50px;
+  margin-right: 1.5rem;
+  align-self: center;
+  border: 2px solid #fff;
 }
 
-.selfCenter {
+.mobileProjectPhoto {
   align-self: center;
+  border: 2px solid #fff;
+  margin-right: 0rem;
 }
 
 /* OLD STYLES BELOW (In-progress move) */
@@ -56,10 +62,6 @@ a {
 
 .basePadding {
   padding: 20px;
-}
-
-.whiteOutline {
-  border: 2px solid #fff;
 }
 
 .negative1TopMargin {

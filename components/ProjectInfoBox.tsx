@@ -33,7 +33,7 @@ function ProjectInfoBox({
           <Image
             /* Styles are different here as styled components 
              can't build on top of the next/Image component */
-            className="profilePhoto selfCenter whiteOutline"
+            className="projectPhoto"
             src={imagePath}
             alt="ProjectDemo"
             width={300}
@@ -60,7 +60,7 @@ function ProjectInfoBox({
             <Image
               /* Styles are different here as styled components 
                  can't build on top of the next/Image component */
-              className="profilePhoto mobileProjectPhoto selfCenter whiteOutline"
+              className="profilePhoto mobileProjectPhoto"
               src={imagePath}
               alt="ProjectDemo"
               width={200}
