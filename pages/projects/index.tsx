@@ -26,42 +26,45 @@ function Projects() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
-    <ProjectsPageWrapper>
-      <ContentWrapper>
-        <NameText isMobile={isUserOnMobile}>Projects</NameText>
-      </ContentWrapper>
-      <FlexRow>
-        <LinkLogo iconName={faHouse} link="/" padding size="2x" />
-        <LinkLogo
-          iconName={faLinkedin}
-          link={LinkedinUrl}
-          padding
-          size="2x"
-          newTab
-        />
-        <LinkLogo
-          iconName={faGithub}
-          link={GithubUrl}
-          padding
-          size="2x"
-          newTab
-        />
-      </FlexRow>
-      <div>
-        <ProjectInfoBox
-          title={BlueAvocadoTitle}
-          description={BlueAvocadoDescription}
-          imagePath={BlueAvocadoImage}
-          link={BlueAvocadoGithubLink}
-        />
-        <ProjectInfoBox
-          title={HwDevTitle}
-          description={HwDevDescription}
-          imagePath={HwDevImage}
-          link={HwDevGithubLink}
-        />
-      </div>
-    </ProjectsPageWrapper>
+    <>
+      <title>Harley Welsby | Projects</title>
+      <ProjectsPageWrapper>
+        <ContentWrapper>
+          <NameText isMobile={isUserOnMobile}>Projects</NameText>
+        </ContentWrapper>
+        <FlexRow>
+          <LinkLogo iconName={faHouse} link="/" padding size="2x" />
+          <LinkLogo
+            iconName={faLinkedin}
+            link={LinkedinUrl}
+            padding
+            size="2x"
+            newTab
+          />
+          <LinkLogo
+            iconName={faGithub}
+            link={GithubUrl}
+            padding
+            size="2x"
+            newTab
+          />
+        </FlexRow>
+        <div>
+          <ProjectInfoBox
+            title={BlueAvocadoTitle}
+            description={BlueAvocadoDescription}
+            imagePath={BlueAvocadoImage}
+            link={BlueAvocadoGithubLink}
+          />
+          <ProjectInfoBox
+            title={HwDevTitle}
+            description={HwDevDescription}
+            imagePath={HwDevImage}
+            link={HwDevGithubLink}
+          />
+        </div>
+      </ProjectsPageWrapper>
+    </>
   );
 }
 

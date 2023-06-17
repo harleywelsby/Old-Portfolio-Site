@@ -11,7 +11,6 @@ import {
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
-import HtmlHead from "@/components/HtmlHead";
 import { MobileUserContext } from "@/components/MobileUserContext";
 import {
   CodeLabel,
@@ -27,7 +26,7 @@ function Homepage() {
 
   return (
     <>
-      <HtmlHead />
+      <title>Harley Welsby | Home</title>
       <HomePageWrapper isMobile={isUserOnMobile}>
         <ContentWrapper>
           <div className="animate__bounceIn">
