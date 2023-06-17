@@ -10,6 +10,30 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Image Component styles */
+
+.profilePhoto {
+  display: flex;
+  border-radius: 50px;
+  margin-right: 6rem;
+}
+
+.mobileProfilePhoto {
+  width: 16rem;
+  height: 20rem;
+  margin-right: 0rem;
+}
+
+.mobileProjectPhoto {
+  margin-right: 0rem;
+}
+
+.selfCenter {
+  align-self: center;
+}
+
+/* OLD STYLES BELOW (In-progress move) */
+
 .linkLogoHover {
   color: #ffaa4c;
 }
@@ -26,11 +50,6 @@ a {
   text-decoration: none;
 }
 
-.profilePhoto {
-  display: flex;
-  border-radius: 50px;
-}
-
 .projectsPageWrapper {
   flex-direction: column;
 }
@@ -39,51 +58,14 @@ a {
   padding: 20px;
 }
 
-.selfCenter {
-  align-self: center;
-}
-
 .whiteOutline {
-  border: 5px solid #fff;
+  border: 2px solid #fff;
 }
 
 .negative1TopMargin {
   margin-top: -1rem;
 }
 
-/* Mobile and Web Specific Styles */
-
-.mobilePageWrapper {
-  flex-direction: column-reverse;
-}
-
-.mobileProfilePhoto {
-  width: 16rem;
-  height: 20rem;
-  margin-right: 0rem;
-}
-
-.webProfilePhoto {
-  margin-right: 6rem;
-}
-
-.mobileNameText {
+.smallTitle {
   font-size: 50px;
-}
-
-.webNameText {
-  font-size: 90px;
-}
-
-.mobileProjectNameText {
-  font-size: 25px;
-}
-
-.mobileDescriptionText {
-  font-size: 12px;
-}
-
-.webDescriptionText {
-  font-size: 25px;
-  padding: 5px;
 }

@@ -1,6 +1,10 @@
-import NameAndRole from "@/components/NameAndRole";
-import { FlexRow, PageWrapper } from "@/styles/styledComponents";
-import ProjectInfoBox from "@/components/projectInfo/ProjectInfoBox";
+import {
+  ContentWrapper,
+  FlexRow,
+  NameText,
+  ProjectsPageWrapper,
+} from "@/styles/styledComponents";
+import ProjectInfoBox from "@/components/ProjectInfoBox";
 import {
   BlueAvocadoDescription,
   BlueAvocadoGithubLink,
@@ -16,15 +20,16 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { GithubUrl, LinkedinUrl } from "@/components/constants/constants";
 import { useContext } from "react";
-import { MobileUserContext } from "@/components/context/MobileUserContext";
-import MobileProjectInfoBox from "@/components/projectInfo/MobileProjectInfoBox";
+import { MobileUserContext } from "@/components/MobileUserContext";
 
 function Projects() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
-    <PageWrapper className={"projectsPageWrapper"}>
-      <NameAndRole />
+    <ProjectsPageWrapper>
+      <ContentWrapper>
+        <NameText isMobile={isUserOnMobile}>Projects</NameText>
+      </ContentWrapper>
       <FlexRow>
         <LinkLogo iconName={faHouse} link="/" padding size="2x" />
         <LinkLogo
@@ -42,39 +47,21 @@ function Projects() {
           newTab
         />
       </FlexRow>
-      {isUserOnMobile && (
-        <div>
-          <MobileProjectInfoBox
-            title={BlueAvocadoTitle}
-            description={BlueAvocadoDescription}
-            imagePath={BlueAvocadoImage}
-            link={BlueAvocadoGithubLink}
-          />
-          <MobileProjectInfoBox
-            title={HwDevTitle}
-            description={HwDevDescription}
-            imagePath={HwDevImage}
-            link={HwDevGithubLink}
-          />
-        </div>
-      )}
-      {!isUserOnMobile && (
-        <div>
-          <ProjectInfoBox
-            title={BlueAvocadoTitle}
-            description={BlueAvocadoDescription}
-            imagePath={BlueAvocadoImage}
-            link={BlueAvocadoGithubLink}
-          />
-          <ProjectInfoBox
-            title={HwDevTitle}
-            description={HwDevDescription}
-            imagePath={HwDevImage}
-            link={HwDevGithubLink}
-          />
-        </div>
-      )}
-    </PageWrapper>
+      <div>
+        <ProjectInfoBox
+          title={BlueAvocadoTitle}
+          description={BlueAvocadoDescription}
+          imagePath={BlueAvocadoImage}
+          link={BlueAvocadoGithubLink}
+        />
+        <ProjectInfoBox
+          title={HwDevTitle}
+          description={HwDevDescription}
+          imagePath={HwDevImage}
+          link={HwDevGithubLink}
+        />
+      </div>
+    </ProjectsPageWrapper>
   );
 }
 

@@ -3,15 +3,16 @@ import "animate.css";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import {
-  PageWrapper,
+  HomePageWrapper,
   ContentWrapper,
   LinkLogoSectionWrapper,
+  NameText,
+  RoleText,
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
 import HtmlHead from "@/components/HtmlHead";
-import { MobileUserContext } from "@/components/context/MobileUserContext";
-import NameAndRole from "@/components/NameAndRole";
+import { MobileUserContext } from "@/components/MobileUserContext";
 import {
   CodeLabel,
   CodeUrl,
@@ -27,12 +28,14 @@ function Homepage() {
   return (
     <>
       <HtmlHead />
-      <PageWrapper className={`${isUserOnMobile && "mobilePageWrapper"}`}>
+      <HomePageWrapper isMobile={isUserOnMobile}>
         <ContentWrapper>
           <div className="animate__bounceIn">
             <Image
+              /* Styles are different here as styled components 
+              can't build on top of the next/Image component */
               className={`profilePhoto ${
-                isUserOnMobile ? "mobileProfilePhoto" : "webProfilePhoto"
+                isUserOnMobile && "mobileProfilePhoto"
               }`}
               src="/harleyProfile.jpg"
               alt="ProfilePhoto"
@@ -45,7 +48,10 @@ function Homepage() {
         </ContentWrapper>
         <ContentWrapper>
           <div className="animate__bounceIn">
-            <NameAndRole />
+            <ContentWrapper>
+              <NameText isMobile={isUserOnMobile}>Harley Welsby</NameText>
+              <RoleText>Full-Stack Software Developer</RoleText>
+            </ContentWrapper>
           </div>
           <div className="animate__bounceIn">
             <LinkLogoSectionWrapper>
@@ -75,7 +81,7 @@ function Homepage() {
             </LinkLogoSectionWrapper>
           </div>
         </ContentWrapper>
-      </PageWrapper>
+      </HomePageWrapper>
     </>
   );
 }
