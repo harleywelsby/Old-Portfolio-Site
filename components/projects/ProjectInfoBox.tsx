@@ -30,7 +30,7 @@ function ProjectInfoBox({
           loading="eager"
         />
         <FlexColumn>
-          <NameText className="mobileNameText">{title}</NameText>
+          <NameText className="smallTitle">{title}</NameText>
           <DescriptionText className="webDescriptionText">
             {description}
           </DescriptionText>
