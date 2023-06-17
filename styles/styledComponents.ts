@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "animate.css";
+import { isMobile } from "react-device-detect";
 
 interface ICrossPlatformComponent {
   className?: string;
@@ -13,6 +14,7 @@ export const PageWrapper = styled.div<ICrossPlatformComponent>`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  flex-direction: ${isMobile ? "column-reverse" : "row"};
 `;
 
 export const NameText = styled.h1<ICrossPlatformComponent>`

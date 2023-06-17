@@ -29,6 +29,7 @@ a {
 .profilePhoto {
   display: flex;
   border-radius: 50px;
+  margin-right: 6rem;
 }
 
 .projectsPageWrapper {
@@ -55,28 +56,12 @@ a {
   margin-top: -1rem;
 }
 
-/* Mobile and Web Specific Styles */
-
-.mobilePageWrapper {
-  flex-direction: column-reverse;
-}
-
-.mobileProfilePhoto {
-  width: 16rem;
-  height: 20rem;
-  margin-right: 0rem;
-}
-
-.webProfilePhoto {
-  margin-right: 6rem;
-}
-
-.mobileNameText {
+.smallTitle {
   font-size: 50px;
 }
+/* Mobile and Web Specific Styles */
 
-.webNameText {
-  font-size: 90px;
+.webProfilePhoto {
 }
 
 .mobileProjectNameText {

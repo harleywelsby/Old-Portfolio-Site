@@ -6,12 +6,13 @@ import {
   PageWrapper,
   ContentWrapper,
   LinkLogoSectionWrapper,
+  NameText,
+  RoleText,
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
-import HtmlHead from "@/components/HtmlHead";
+import HtmlHead from "@/components/meta/HtmlHead";
 import { MobileUserContext } from "@/components/context/MobileUserContext";
-import NameAndRole from "@/components/NameAndRole";
 import {
   CodeLabel,
   CodeUrl,
@@ -32,7 +33,7 @@ function Homepage() {
           <div className="animate__bounceIn">
             <Image
               className={`profilePhoto ${
-                isUserOnMobile ? "mobileProfilePhoto" : "webProfilePhoto"
+                isUserOnMobile && "mobileProfilePhoto"
               }`}
               src="/harleyProfile.jpg"
               alt="ProfilePhoto"
@@ -45,7 +46,12 @@ function Homepage() {
         </ContentWrapper>
         <ContentWrapper>
           <div className="animate__bounceIn">
-            <NameAndRole />
+            <ContentWrapper>
+              <NameText className={isUserOnMobile ? "smallTitle" : "bigTitle"}>
+                Harley Welsby
+              </NameText>
+              <RoleText>Full-Stack Software Developer</RoleText>
+            </ContentWrapper>
           </div>
           <div className="animate__bounceIn">
             <LinkLogoSectionWrapper>

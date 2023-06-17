@@ -4,7 +4,7 @@ import {
   NameText,
   PageWrapper,
 } from "@/styles/styledComponents";
-import ProjectInfoBox from "@/components/projectInfo/ProjectInfoBox";
+import ProjectInfoBox from "@/components/projects/ProjectInfoBox";
 import {
   BlueAvocadoDescription,
   BlueAvocadoGithubLink,
@@ -21,7 +21,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { GithubUrl, LinkedinUrl } from "@/components/constants/constants";
 import { useContext } from "react";
 import { MobileUserContext } from "@/components/context/MobileUserContext";
-import MobileProjectInfoBox from "@/components/projectInfo/MobileProjectInfoBox";
+import MobileProjectInfoBox from "@/components/projects/MobileProjectInfoBox";
 
 function Projects() {
   const { isUserOnMobile } = useContext(MobileUserContext);
@@ -29,7 +29,7 @@ function Projects() {
   return (
     <PageWrapper className={"projectsPageWrapper"}>
       <ContentWrapper>
-        <NameText className={isUserOnMobile ? "mobileNameText" : "webNameText"}>
+        <NameText className={isUserOnMobile ? "smallTitle" : "bigTitle"}>
           Projects
         </NameText>
       </ContentWrapper>
