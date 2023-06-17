@@ -28,10 +28,12 @@ function Homepage() {
   return (
     <>
       <HtmlHead />
-      <PageWrapper className={`${isUserOnMobile && "mobilePageWrapper"}`}>
+      <PageWrapper isMobile={isUserOnMobile}>
         <ContentWrapper>
           <div className="animate__bounceIn">
             <Image
+              /* Styles are different here as styled components 
+              can't build on top of the next/Image component */
               className={`profilePhoto ${
                 isUserOnMobile && "mobileProfilePhoto"
               }`}
@@ -47,9 +49,7 @@ function Homepage() {
         <ContentWrapper>
           <div className="animate__bounceIn">
             <ContentWrapper>
-              <NameText className={isUserOnMobile ? "smallTitle" : "bigTitle"}>
-                Harley Welsby
-              </NameText>
+              <NameText isMobile={isUserOnMobile}>Harley Welsby</NameText>
               <RoleText>Full-Stack Software Developer</RoleText>
             </ContentWrapper>
           </div>

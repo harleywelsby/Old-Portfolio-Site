@@ -1,5 +1,17 @@
 /* Global Styles */
 
+.profilePhoto {
+  display: flex;
+  border-radius: 50px;
+  margin-right: 6rem;
+}
+
+.mobileProfilePhoto {
+  width: 16rem;
+  height: 20rem;
+  margin-right: 0rem;
+}
+
 html {
   background-color: #282a3a;
   margin: 0;
@@ -24,12 +36,6 @@ html {
 
 a {
   text-decoration: none;
-}
-
-.profilePhoto {
-  display: flex;
-  border-radius: 50px;
-  margin-right: 6rem;
 }
 
 .projectsPageWrapper {

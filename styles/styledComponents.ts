@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import "animate.css";
-import { isMobile } from "react-device-detect";
 
 interface ICrossPlatformComponent {
   className?: string;
+  isMobile?: boolean;
 }
 
 export const PageWrapper = styled.div<ICrossPlatformComponent>`
@@ -14,12 +14,13 @@ export const PageWrapper = styled.div<ICrossPlatformComponent>`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  flex-direction: ${isMobile ? "column-reverse" : "row"};
+  flex-direction: ${(props) => (props.isMobile ? "column-reverse" : "row")};
 `;
 
 export const NameText = styled.h1<ICrossPlatformComponent>`
   display: contents;
   color: #ffaa4c;
+  font-size: ${(props) => (props.isMobile ? "50px" : "90px")};
 `;
 
 export const RoleText = styled.p`

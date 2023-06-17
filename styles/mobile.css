@@ -2,12 +2,6 @@
   flex-direction: column-reverse;
 }
 
-.mobileProfilePhoto {
-  width: 16rem;
-  height: 20rem;
-  margin-right: 0rem;
-}
-
 .mobileTitleText {
   font-size: 50px;
 }
