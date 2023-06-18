@@ -10,6 +10,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Image Component styles */
 
 .profilePhoto {
@@ -38,7 +42,13 @@ html {
   margin-right: 0rem;
 }
 
-/* OLD STYLES BELOW (In-progress move) */
+/* LinkLogo styles */
+
+.buttonPadding {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
 
 .linkLogoHover {
   color: #ffaa4c;
@@ -50,24 +60,4 @@ html {
 
 .labelMargin {
   margin-top: 0.5rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-.projectsPageWrapper {
-  flex-direction: column;
-}
-
-.basePadding {
-  padding: 20px;
-}
-
-.negative1TopMargin {
-  margin-top: -1rem;
-}
-
-.smallTitle {
-  font-size: 50px;
 }

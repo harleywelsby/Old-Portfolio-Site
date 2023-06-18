@@ -31,7 +31,7 @@ function LinkLogo({
   return (
     <Link href={link} target={newTab ? "_blank" : ""} rel="noreferrer">
       <LinkLogoWrapper
-        className={`${padding && "basePadding"}`}
+        className={`${padding && "buttonPadding"}`}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >

@@ -7,7 +7,7 @@ interface ICrossPlatformComponent {
 }
 
 /******************************
- *       Page Wrappers        *
+ *  Page/Component Wrappers   *
  ******************************/
 
 export const HomePageWrapper = styled.div<ICrossPlatformComponent>`
@@ -49,6 +49,33 @@ export const ProjectInfoBoxWrapper = styled.div`
   padding: 3px;
 `;
 
+export const LinkLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const LinkLogoSectionWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+`;
+
+export const InfoBoxContent = styled.div<ICrossPlatformComponent>`
+  width: 80%;
+  text-align: ${(props) => (props.isMobile ? "center" : "left")};
+  padding: 20px;
+  border: 1.5px solid;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+`;
+
 /******************************
  *            Text            *
  ******************************/
@@ -82,47 +109,9 @@ export const DescriptionText = styled.p<ICrossPlatformComponent>`
   padding: ${(props) => (props.isMobile ? "0px" : "5px")};
 `;
 
-// TODO from below
-
-export const LinkLogoSectionWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  justify-content: center;
-  align-items: center;
-  min-height: 150px;
-`;
-
-export const LinkLogoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const CaptchaContainer = styled.div`
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-`;
-
-export const CaptchaText = styled.h1<ICrossPlatformComponent>`
-  color: #ffffff;
-  text-align: center;
-`;
-
-export const InfoBoxContent = styled.div<ICrossPlatformComponent>`
-  width: 80%;
-  text-align: ${(props) => (props.isMobile ? "center" : "left")};
-  padding: 20px;
-  border: 1.5px solid;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: row;
-`;
+/******************************
+ *         Flexboxes          *
+ ******************************/
 
 export const FlexColumn = styled.div`
   display: flex;
