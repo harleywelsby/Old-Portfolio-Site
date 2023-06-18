@@ -100,7 +100,7 @@ export const ProjectTitleText = styled.h1<ICrossPlatformComponent>`
 `;
 
 export const DescriptionText = styled.p<ICrossPlatformComponent>`
-  margin-top: ${(props) => (props.isMobile ? "-1.5rem" : "0rem")};
+  margin-top: ${(props) => (props.isMobile ? "-0.5rem" : "0rem")};
   margin-left: ${(props) => (props.isMobile ? "0.2rem" : "-0.2rem")};
   margin-right: 0.2rem;
   margin-bottom: 1rem;
