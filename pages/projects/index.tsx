@@ -10,10 +10,18 @@ import {
   BlueAvocadoGithubLink,
   BlueAvocadoImage,
   BlueAvocadoTitle,
+  DiscordBotTemplateDescription,
+  DiscordBotTemplateGithubLink,
+  DiscordBotTemplateImage,
+  DiscordBotTemplateTitle,
   HwDevDescription,
   HwDevGithubLink,
   HwDevImage,
   HwDevTitle,
+  RoboMoeDescription,
+  RoboMoeGithubLink,
+  RoboMoeImage,
+  RoboMoeTitle,
 } from "@/components/constants/projectsConstants";
 import LinkLogo from "@/components/LinkLogo";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
@@ -54,16 +62,28 @@ function Projects() {
         </FlexRow>
         <div>
           <ProjectInfoBox
-            title={BlueAvocadoTitle}
-            description={BlueAvocadoDescription}
-            imagePath={BlueAvocadoImage}
-            link={BlueAvocadoGithubLink}
-          />
-          <ProjectInfoBox
             title={HwDevTitle}
             description={HwDevDescription}
             imagePath={HwDevImage}
             link={HwDevGithubLink}
+          />
+          <ProjectInfoBox
+            title={DiscordBotTemplateTitle}
+            description={DiscordBotTemplateDescription}
+            imagePath={DiscordBotTemplateImage}
+            link={DiscordBotTemplateGithubLink}
+          />
+          <ProjectInfoBox
+            title={RoboMoeTitle}
+            description={RoboMoeDescription}
+            imagePath={RoboMoeImage}
+            link={RoboMoeGithubLink}
+          />
+          <ProjectInfoBox
+            title={BlueAvocadoTitle}
+            description={BlueAvocadoDescription}
+            imagePath={BlueAvocadoImage}
+            link={BlueAvocadoGithubLink}
           />
         </div>
       </ProjectsPageWrapper>
