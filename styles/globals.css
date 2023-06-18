@@ -10,6 +10,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Image Component styles */
 
 .profilePhoto {
@@ -24,15 +28,27 @@ html {
   margin-right: 0rem;
 }
 
+.projectPhoto {
+  display: flex;
+  border-radius: 50px;
+  margin-right: 1.5rem;
+  align-self: center;
+  border: 2px solid #fff;
+}
+
 .mobileProjectPhoto {
+  align-self: center;
+  border: 2px solid #fff;
   margin-right: 0rem;
 }
 
-.selfCenter {
-  align-self: center;
-}
+/* LinkLogo styles */
 
-/* OLD STYLES BELOW (In-progress move) */
+.buttonPadding {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
 
 .linkLogoHover {
   color: #ffaa4c;
@@ -44,28 +60,4 @@ html {
 
 .labelMargin {
   margin-top: 0.5rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-.projectsPageWrapper {
-  flex-direction: column;
-}
-
-.basePadding {
-  padding: 20px;
-}
-
-.whiteOutline {
-  border: 2px solid #fff;
-}
-
-.negative1TopMargin {
-  margin-top: -1rem;
-}
-
-.smallTitle {
-  font-size: 50px;
 }

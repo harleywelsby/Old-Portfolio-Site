@@ -11,7 +11,6 @@ import {
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
-import HtmlHead from "@/components/HtmlHead";
 import { MobileUserContext } from "@/components/MobileUserContext";
 import {
   CodeLabel,
@@ -21,13 +20,16 @@ import {
   LinkedinLabel,
   LinkedinUrl,
 } from "@/components/constants/constants";
+import Head from "next/head";
 
 function Homepage() {
   const { isUserOnMobile } = useContext(MobileUserContext);
 
   return (
     <>
-      <HtmlHead />
+      <Head>
+        <title>Harley Welsby | Home</title>
+      </Head>
       <HomePageWrapper isMobile={isUserOnMobile}>
         <ContentWrapper>
           <div className="animate__bounceIn">
