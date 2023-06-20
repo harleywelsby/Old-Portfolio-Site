@@ -120,6 +120,17 @@ export const DescriptionText = styled.p<ICrossPlatformComponent>`
   padding: ${(props) => (props.isMobile ? "0px" : "5px")};
 `;
 
+export const FreePageText = styled.p<ICrossPlatformComponent>`
+  margin-top: ${(props) => (props.isMobile ? "-0.5rem" : "0rem")};
+  margin-left: ${(props) => (props.isMobile ? "0.2rem" : "-0.2rem")};
+  margin-right: 0.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: ${(props) => (props.isMobile ? "18px" : "25px")};
+  padding: ${(props) => (props.isMobile ? "0px" : "5px")};
+  width: ${(props) => (props.isMobile ? "100%" : "40%")};
+`;
+
 /******************************
  *         Flexboxes          *
  ******************************/

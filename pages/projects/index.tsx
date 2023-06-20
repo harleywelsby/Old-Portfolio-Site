@@ -30,7 +30,7 @@ import {
   faLaptopCode,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { AboutMeUrl } from "@/components/constants/constants";
+import { AboutMeUrl, ContactUrl } from "@/components/constants/constants";
 import { useContext } from "react";
 import { MobileUserContext } from "@/components/MobileUserContext";
 import Head from "next/head";
@@ -57,7 +57,7 @@ function Projects() {
             size="2x"
             isSelected
           />
-          <LinkLogo iconName={faComment} link={""} padding size="2x" />
+          <LinkLogo iconName={faComment} link={ContactUrl} padding size="2x" />
         </FlexRow>
         <div>
           <ProjectInfoBox
