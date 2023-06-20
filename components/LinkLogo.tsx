@@ -12,6 +12,7 @@ interface LinkLogoProps {
   newTab?: boolean;
   size: "1x" | "2x" | "3x" | "4x" | "5x";
   padding?: boolean;
+  isSelected?: boolean;
 }
 
 // Icon/Logo with a label and link to a given URL.
@@ -22,6 +23,7 @@ function LinkLogo({
   newTab,
   size,
   padding,
+  isSelected,
 }: LinkLogoProps) {
   // Custom hover check. We don't use :hover in CSS for this
   // as doing it custom can make both the icon and label change
@@ -38,7 +40,7 @@ function LinkLogo({
         <FontAwesomeIcon
           icon={iconName}
           size={size}
-          className={`${isHover && "linkLogoHover"}`}
+          className={`${(isHover || isSelected) && "linkLogoHover"}`}
           color="white"
         />
         <p

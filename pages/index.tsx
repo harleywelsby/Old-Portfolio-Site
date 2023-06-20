@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
 import "animate.css";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import {
+  faComment,
+  faLaptopCode,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   HomePageWrapper,
   ContentWrapper,
@@ -13,12 +16,12 @@ import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
 import { MobileUserContext } from "@/components/MobileUserContext";
 import {
+  AboutMeLabel,
+  AboutMeUrl,
   CodeLabel,
   CodeUrl,
-  GithubLabel,
-  GithubUrl,
-  LinkedinLabel,
-  LinkedinUrl,
+  ContactLabel,
+  ContactUrl,
 } from "@/components/constants/constants";
 import Head from "next/head";
 
@@ -58,18 +61,9 @@ function Homepage() {
           <div className="animate__bounceIn">
             <LinkLogoSectionWrapper>
               <LinkLogo
-                iconName={faLinkedin}
-                link={LinkedinUrl}
-                label={LinkedinLabel}
-                newTab
-                size={isUserOnMobile ? "4x" : "5x"}
-                padding
-              />
-              <LinkLogo
-                iconName={faGithub}
-                link={GithubUrl}
-                label={GithubLabel}
-                newTab
+                iconName={faUser}
+                link={AboutMeUrl}
+                label={AboutMeLabel}
                 size={isUserOnMobile ? "4x" : "5x"}
                 padding
               />
@@ -77,6 +71,13 @@ function Homepage() {
                 iconName={faLaptopCode}
                 link={CodeUrl}
                 label={CodeLabel}
+                size={isUserOnMobile ? "4x" : "5x"}
+                padding
+              />
+              <LinkLogo
+                iconName={faComment}
+                link={ContactUrl}
+                label={ContactLabel}
                 size={isUserOnMobile ? "4x" : "5x"}
                 padding
               />

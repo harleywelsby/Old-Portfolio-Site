@@ -24,9 +24,13 @@ import {
   RoboMoeTitle,
 } from "@/components/constants/projectsConstants";
 import LinkLogo from "@/components/LinkLogo";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { GithubUrl, LinkedinUrl } from "@/components/constants/constants";
+import {
+  faComment,
+  faHouse,
+  faLaptopCode,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { AboutMeUrl } from "@/components/constants/constants";
 import { useContext } from "react";
 import { MobileUserContext } from "@/components/MobileUserContext";
 import Head from "next/head";
@@ -45,20 +49,15 @@ function Projects() {
         </ContentWrapper>
         <FlexRow>
           <LinkLogo iconName={faHouse} link="/" padding size="2x" />
+          <LinkLogo iconName={faUser} link={AboutMeUrl} padding size="2x" />
           <LinkLogo
-            iconName={faLinkedin}
-            link={LinkedinUrl}
+            iconName={faLaptopCode}
+            link=""
             padding
             size="2x"
-            newTab
+            isSelected
           />
-          <LinkLogo
-            iconName={faGithub}
-            link={GithubUrl}
-            padding
-            size="2x"
-            newTab
-          />
+          <LinkLogo iconName={faComment} link={""} padding size="2x" />
         </FlexRow>
         <div>
           <ProjectInfoBox

@@ -32,6 +32,17 @@ export const ProjectsPageWrapper = styled.div`
   flex-direction: column;
 `;
 
+export const ContactPageWrapper = styled.div`
+  background-color: #282a3a;
+  min-height: 96vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  flex-direction: column;
+`;
+
 export const ContentWrapper = styled.div`
   font-family: "Trebuchet MS", sans-serif;
   justify-content: center;
