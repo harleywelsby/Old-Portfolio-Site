@@ -61,3 +61,8 @@ a {
 .labelMargin {
   margin-top: 0.5rem;
 }
+
+/* Once CSS has loaded, remove the background overlay */
+#loadingScreen {
+  display: none;
+}

@@ -8,6 +8,7 @@ import {
   LinkLogoSectionWrapper,
   NameText,
   RoleText,
+  LoadingScreen,
 } from "../styles/styledComponents";
 import LinkLogo from "@/components/LinkLogo";
 import Image from "next/image";
@@ -30,6 +31,7 @@ function Homepage() {
       <Head>
         <title>Harley Welsby | Home</title>
       </Head>
+      <LoadingScreen id="loadingScreen" />
       <HomePageWrapper isMobile={isUserOnMobile}>
         <ContentWrapper>
           <div className="animate__bounceIn">

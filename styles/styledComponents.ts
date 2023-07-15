@@ -122,3 +122,15 @@ export const FlexRow = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
+// Hides the page until CSS has completely loaded.
+// See: https://stackoverflow.com/questions/4172281/force-browsers-to-load-css-before-showing-the-page
+export const LoadingScreen = styled.div`
+  background-color: #282a3a;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+`;
