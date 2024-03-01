@@ -1,6 +1,6 @@
-# https://www.harleywelsby.dev/
+# Old Portfolio Site with Next.js
 
-My website, built with the Next.js framework for React and hosted serverlessly on Vercel.
+My old website, built with the Next.js framework for React and hosted serverlessly on Vercel.
 
 ![Demo](public/websiteDemo.png "WebsiteDemo")
 
